@@ -183,18 +183,18 @@
                             <form method="post" class="contact-validation-active" id="contact-form">
                                 <div>
                                     <input type="text" class="form-control" name="name" id="name"
-                                        placeholder="Your Name*">
+                                        placeholder="Your Name">
                                 </div>
                                 <div>
                                     <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email*">
+                                        placeholder="Your Email">
                                 </div>
                                 <div>
                                     <input type="text" class="form-control" name="phone" id="phone"
-                                        placeholder="Your Phone*">
+                                        placeholder="Your Phone">
                                 </div>
                                 <div>
-                                    <select name="subject" class="form-control">
+                                    <select name="subject" class="form-control" id="subject">
                                         <option disabled="disabled" selected>Subject</option>
                                         <option>Office</option>
                                         <option>Home</option>
@@ -204,19 +204,15 @@
                                     </select>
                                 </div>
                                 <div class="fullwidth">
-                                    <textarea class="form-control" name="note" id="note"
-                                        placeholder="Message..."></textarea>
+                                    <textarea class="form-control" name="note" id="message"
+                                        placeholder="Describe Your Plumbing Issue"></textarea>
                                 </div>
                                 <div class="submit-area">
-                                    <button type="submit" class="theme-btn"><i class="fa fa-angle-double-right"
+                                    <button type="submit" onclick="sendEmail()" class="theme-btn"><i class="fa fa-angle-double-right"
                                             aria-hidden="true"></i> Get in Touch</button>
                                     <div id="loader">
                                         <i class="ti-reload"></i>
                                     </div>
-                                </div>
-                                <div class="clearfix error-handling-messages">
-                                    <div id="success">Thank you</div>
-                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
                                 </div>
                             </form>
                         </div>
@@ -313,6 +309,41 @@
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript">
+          (function(){
+              emailjs.init("of-qJpcXvDgROkkbD");
+          })();
+          </script>
+      <script>
+      function sendEmail() {
+          
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var phone = document.getElementById("phone").value;
+          var message = document.getElementById("message").value;
+          var subject = document.getElementById("subject").value;  
+          
+      
+          // Sending email using EmailJS
+          emailjs.send("service_1efdh2i", "template_1w5on08", {
+              name: name,
+              email: email,
+              phone: phone,
+              subject : subject,
+              message: message,
+              clinique_name : "Finest Rooter & Plumbing",
+              dentist_email : "finestrooterplumbing@gmail.com"
+          })
+          .then(function(response) {
+              // Email sent successfully
+              alert("Message sent, thank you " + name);
+          }, function(error) {
+              // Email sending failed
+              console.error("Email sending error:", error);
+          });
+      }
+      </script>
 </body>
 
 </html>
