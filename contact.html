@@ -177,7 +177,7 @@
                         </div>
                         <div class="wpo-contact-title">
                             <h2>Have Any Question?</h2>
-                            <p>We're here to help with all your plumbing needs. Call, email or visit our showroom for quick answers from our San Diego plumbing experts.</p>
+                            <p>We're here to help with all your plumbing needs. Call, email or visit our showroom for quick answers from our plumbing experts.</p>
                         </div>
                         <div class="wpo-contact-form-area">
                             <form method="post" class="contact-validation-active" id="contact-form">
@@ -310,40 +310,39 @@
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-      <script type="text/javascript">
-          (function(){
-              emailjs.init("of-qJpcXvDgROkkbD");
-          })();
-          </script>
-      <script>
-      function sendEmail() {
-          
-          var name = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-          var phone = document.getElementById("phone").value;
-          var message = document.getElementById("message").value;
-          var subject = document.getElementById("subject").value;  
-          
-      
-          // Sending email using EmailJS
-          emailjs.send("service_1efdh2i", "template_1w5on08", {
-              name: name,
-              email: email,
-              phone: phone,
-              subject : subject,
-              message: message,
-              clinique_name : "Finest Rooter & Plumbing",
-              dentist_email : "finestrooterplumbing@gmail.com"
-          })
-          .then(function(response) {
-              // Email sent successfully
-              alert("Message sent, thank you " + name);
-          }, function(error) {
-              // Email sending failed
-              console.error("Email sending error:", error);
-          });
-      }
-      </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("o-PEn9XetLy00clG2");
+        })();
+        </script>
+    <script>
+    function sendEmail() {
+        
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+        
+    
+        // Sending email using EmailJS
+        emailjs.send("service_wlpqesg", "template_yq5c94t", {
+            name: name,
+            email: email,
+            phone: phone,
+            subject : subject,
+            message: message,
+            business_name : "Finest Rooter & Plumbing",
+            client_email : "finestrooterplumbing@gmail.com"
+        })
+        .then(function(response) {
+            // Email sent successfully
+            alert("Message sent, thank you " + name);
+        }, function(error) {
+            // Email sending failed
+            console.error("Email sending error:", error);
+        });
+    }
+    </script>
 </body>
 
 </html>
