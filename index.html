@@ -27,14 +27,14 @@
 </head>
 <style>
     .form-container {
-        background: #f56a2f;
+        background: #FF2B32;
         max-width: 400px;
         margin: 0 auto;
     }
     .quote-form input, .quote-form textarea {
         width: 100%;
         padding: 10px;
-        border: 1px solid #f56a2f;
+        border: 1px solid #FF2B32;
         border-radius: 4px;
     }
     .quote-form button {
@@ -42,7 +42,217 @@
         border: none;
         border-radius: 4px;
     }
-    </style>
+    .new-button-style {
+        background-color: #f0e8d4;
+        color: #7b3f15;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6);
+        font-weight: bold;
+        font-size: 18px;
+    }
+    /* Decorative elements */
+    .decor-container {
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+    }
+    .decor-image {
+        position: absolute;
+        object-fit: cover;
+        opacity: 0.8;
+        z-index: 1; /* Below content but above background */
+    }
+    /* Header section decorations */
+    .header-decor-image1 {
+        width: 60px;
+        top: 10%;
+        left: 5%;
+        transform: rotate(10deg);
+    }
+    .header-decor-image2 {
+        width: 60px;
+        top: 10%;
+        right: 5%;
+    }
+    /* Hero section decorations */
+    .hero-decor-image1 {
+        width: 50px;
+        top: 5%;
+        left: 3%;
+        transform: rotate(15deg);
+    }
+    .hero-decor-image2 {
+        width: 50px;
+        bottom: 10%;
+        right: 3%;
+        transform: rotate(-12deg);
+    }
+    .hero-decor-image3 {
+        width: 95px;
+        top: 25%;
+        right: 5%;
+        transform: rotate(-10deg);
+    }
+    /* Features section decorations */
+    .features-decor-image1 {
+        width: 50px;
+        top: 5%;
+        right: 10%;
+        transform: rotate(20deg);
+    }
+    .features-decor-image2 {
+        width: 50px;
+        bottom: 10%;
+        left: 5%;
+        transform: rotate(-15deg);
+    }
+    .features-decor-image3 {
+        width: 95px;
+        top: 1%;
+        left: 10%;
+    }
+    /* Service section decorations */
+    .service-decor-image1 {
+        width: 120px;
+        top: 3%;
+        right: 5%;
+        transform: rotate(-15deg);
+    }
+    .service-decor-image2 {
+        width: 50px;
+        bottom: 43%;
+        left: 5%;
+        transform: rotate(10deg);
+    }
+    .service-decor-image3 {
+        width: 40px;
+        top: 16%;
+        left: 8%;
+    }
+    .service-decor-image4 {
+        width: 80px;
+        bottom: 10%;
+        right: 8%;
+        transform: rotate(12deg);
+    }
+    /* Fun fact section decorations */
+    .funfact-decor-image1 {
+        width: 60px;
+        top: 10%;
+        left: 3%;
+        transform: rotate(-20deg);
+    }
+    .funfact-decor-image2 {
+        width: 50px;
+        bottom: 15%;
+        right: 5%;
+    }
+    /* FAQ section decorations */
+    .faq-decor-image1 {
+        width: 50px;
+        top: 5%;
+        right: 5%;
+        transform: rotate(15deg);
+    }
+    .faq-decor-image2 {
+        width: 60px;
+        bottom: 0%;
+        left: 5%;
+        transform: rotate(-10deg);
+    }
+    .faq-decor-image3 {
+        width: 100px;
+        top: 8%;
+        left: 10%;
+    }
+    /* Projects section decorations */
+    .projects-decor-image1 {
+        width: 70px;
+        top: 5%;
+        left: 3%;
+        transform: rotate(18deg);
+    }
+    .projects-decor-image2 {
+        width: 60px;
+        bottom: 5%;
+        right: 3%;
+    }
+    .projects-decor-image3 {
+        width: 100px;
+        top: 10%;
+        right: 5%;
+        transform: rotate(-12deg);
+    }
+    /* Testimonials section decorations */
+    .testimonials-decor-image1 {
+        width: 120px;
+        top: 0%;
+        left: 5%;
+        transform: rotate(-15deg);
+    }
+    .testimonials-decor-image2 {
+        width: 170px;
+        bottom: 30%;
+        right: 80%;
+    }
+    .testimonials-decor-image3 {
+        width: 50px;
+        top: 23%;
+        right: 10%;
+        transform: rotate(10deg);
+    }
+    /* Contact section decorations */
+    .contact-decor-image1 {
+        width: 60px;
+        top: 5%;
+        right: 5%;
+        transform: rotate(12deg);
+    }
+    .contact-decor-image2 {
+        width: 50px;
+        bottom: 0%;
+        left: 5%;
+    }
+    /* Footer decorations */
+    .footer-decor-image1 {
+        width: 80px;
+        bottom: 15%;
+        left: 3%;
+        transform: rotate(20deg);
+    }
+    .footer-decor-image2 {
+        width: 65px;
+        top: 6%;
+        right: 6%;
+        transform: rotate(-10deg);
+    }
+    .footer-decor-image4 {
+        width: 120px;
+        bottom: 30%;
+        left: 60%;
+        transform: rotate(15deg);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .decor-image {
+            width: 50px !important; /* Smaller images on mobile */
+        }
+    }
+    @media (max-width: 768px) {
+        .decor-imagex {
+            width: 350px !important;
+        }
+    }
+    @media (max-width: 768px) {
+        .decor-image8 {
+            width: 150px !important;
+        }
+    }
+
+</style>
 <body>
 
     <!-- start page-wrapper -->
@@ -61,10 +271,9 @@
         </div>
         <!-- end preloader -->
         <!-- Start header -->
-        <header id="header">
-            <!-- end topbar -->
+        <header id="header" class="decor-container">
             <div class="wpo-site-header">
-                <nav class="navigation navbar navbar-expand-lg navbar-light">
+                <nav class="navigation navbar navbar-expand-lg navbar-light" style="background-color: #FF2B32;">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
@@ -79,46 +288,24 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="assets/images/roofingfinest/logofine2.png"
-                                            alt="" style="height: 110px; width: auto;"></a>
+                                    <a class="navbar-brand" href="index.html"><img src="assets/images/roofingfinest/logofine2.png" alt="" style="height: 75px; width: auto;"></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-1 col-1">
                                 <div id="navbar" class="collapse navbar-collapse navigation-holder">
                                     <button class="menu-close"><i class="ti-close"></i></button>
                                     <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                        <li>
-                                            <a href="index.html">Home</a>
-                                        </li>
+                                        <li><a href="index.html">Home</a></li>
                                         <li><a href="about.html">About</a></li>
-                                        <li>
-                                            <a href="services.html">Services</a>
-                                        </li>
+                                        <li><a href="services.html">Services</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
-
                                 </div><!-- end of nav-collapse -->
                             </div>
                             <div class="col col-lg-3 col-md-2 col-2">
                                 <div class="header-right">
-                                    <div class="header-search-form-wrapper">
-                                        <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i
-                                                    class="fi flaticon-magnifiying-glass"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
-                                                        <button type="submit"><i
-                                                                class="fi flaticon-magnifiying-glass"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="close-form">
-                                        <a class="theme-btn" href="contact.html">GET FREE QUOTE</a>
+                                        <a class="new-button-style" href="contact.html">GET FREE QUOTE</a>
                                     </div>
                                 </div>
                             </div>
@@ -129,33 +316,43 @@
         </header>
         <!-- end of header -->
         <!-- start of hero -->
-        <section class="wpo-hero-slider">
+        <section class="wpo-hero-slider decor-container">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                
-                    <div class="slide-inner slide-bg-image" data-background="assets/images/roofingfinest/SP10-1920w.jpg">
-                        <div class="gradient-overlay"></div>
+                    <div class="slide-inner slide-bg-image" style="background-color: #FF2B32;">
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
                                     <div class="slide-content">
                                         <div data-swiper-parallax="300" class="slide-title" style="padding-top: 30px;">
-                                            <h1 style="color: azure;">Plumbing Covina</h1>
+                                            <h1>Plumbing Covina</h1>
+                                            <style>
+                                                h1 {
+                                                    margin-top: 30px;
+                                                    font-size: clamp(2rem, 7vw, 6rem);
+                                                    font-family: 'Arial Black', sans-serif;
+                                                    color: #f0e8d4;
+                                                    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+                                                    letter-spacing: 2px;
+                                                    text-transform: uppercase;
+                                                    font-weight: 900;
+                                                }
+                                            </style>
                                             <br>
                                             <br>
                                             <br>
                                         </div>
                                         <div data-swiper-parallax="400" class="slide-text">
-                                            <p style="font-size: 14px;">We have been a standout Covina plumber for many years so we understand the unique plumbing issues you might have as a home owner or a business owner.We do a lot of work locally so we can get there quick for your emergency plumbing repairs.We can tackle a wide range of issues like gas leaks, sewer line issues and many more! You can have the peace of mind knowing our expert team will take great care of you for any expert plumbing services you might need from a major leak to a routine maintenance.</p>
+                                            <p style="font-size: 14px; color: #f0e8d4;">We have been a standout Covina plumber for many years so we understand the unique plumbing issues you might have as a home owner or a business owner. We do a lot of work locally so we can get there quick for your emergency plumbing repairs. We can tackle a wide range of issues like gas leaks, sewer line issues and many more! You can have the peace of mind knowing our expert team will take great care of you for any expert plumbing services you might need from a major leak to a routine maintenance.</p>
                                         </div>
                                         <div class="clearfix"></div>
                                         <div data-swiper-parallax="500" class="slide-btns">
-                                            <a href="contact.html" class="btn theme-btn">BOOK ONLINE</a>
+                                            <a class="new-button-style" href="contact.html">BOOK ONLINE</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6" id="pc-only">
-                                    <div class="form-container p-4 bg-light rounded">
+                                    <div class="form-container p-4 bg-light rounded" style="background-color: #d3d3d3;">
                                         <h3 class="mb-3">Request a Quote</h3>
                                         <div class="quote-form">
                                             <div class="mb-3">
@@ -170,21 +367,24 @@
                                             <div class="mb-3">
                                                 <textarea id="message" class="form-control" rows="4" placeholder="Describe Your Plumbing Issue" required></textarea>
                                             </div>
-                                            <button type="button" class="btn theme-btn w-100" onclick="sendEmail()">Submit Quote</button>
+                                            <button type="button" class="btn theme-btn w-100" onclick="sendEmail()" style="background-color: red;">Submit Quote</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Hero section decorative elements -->
+                        <img src="assets/images/icon/9.png" class="decor-image hero-decor-image1" alt="Pipe Image">
+                        <img src="assets/images/icon/11.png" class="decor-image hero-decor-image2" alt="Valve Image">
+                        <img src="assets/images/roofingfinest/logofine2.png" class="decor-image hero-decor-image3" alt="Wrench Image">
                     </div>
-                
                 </div>
             </div>
         </section>
-        <section class="wpo-features-section-s2">
+        <section class="wpo-features-section-s2 decor-container" style="background-color: #d3d3d3;">
             <div class="container">
                 <div class="col-lg-6" id="mobile-only">
-                    <div class="form-container p-4 bg-light rounded">
+                    <div class="form-container p-4 bg-light rounded" style="background-color: #d3d3d3;">
                         <h3 class="mb-3">Request a Quote</h3>
                         <div class="quote-form">
                             <div class="mb-3">
@@ -203,18 +403,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- end of wpo-hero-slide-section-->
-        <!-- start of wpo-features-section -->
-        <section class="wpo-features-section-s2">
-            <div class="container">
                 <div class="wpo-features-wrap">
                     <div class="row align-items-center justify-content-between">
                         <div class="col col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="wpo-features-item">
                                 <div class="wpo-features-icon">
-                                     <img src="assets/images/icon/calendar.svg" alt="">
+                                    <img src="assets/images/icon/3.png" alt="">
                                 </div>
                                 <div class="wpo-features-text">
                                     <h4>Book Online</h4>
@@ -225,7 +419,7 @@
                         <div class="col col-lg-4 col-md-4 col-sm-4 col-6">
                             <div class="wpo-features-item active">
                                 <div class="wpo-features-icon">
-                                     <img src="assets/images/icon/express-delivery.svg" alt="">
+                                    <img src="assets/images/icon/express-delivery.svg" alt="">
                                 </div>
                                 <div class="wpo-features-text">
                                     <h4>We Arrive</h4>
@@ -236,7 +430,7 @@
                         <div class="col col-lg-4 col-md-4 col-sm-4 col-12">
                             <div class="wpo-features-item">
                                 <div class="wpo-features-icon">
-                                     <img src="assets/images/icon/prototype.svg" alt="">
+                                    <img src="assets/images/icon/66.png" alt="">
                                 </div>
                                 <div class="wpo-features-text">
                                     <h4>Solve Problem</h4>
@@ -245,33 +439,15 @@
                         </div>
                     </div>
                 </div>
+                <!-- Features section decorative elements -->
+                <img src="assets/images/icon/12.png" class="decor-image features-decor-image1" alt="Wrench Image">
+                <img src="assets/images/icon/3.png" class="decor-image features-decor-image2" alt="Tools Image">
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image features-decor-image3" alt="Pipe-Valve Image">
             </div>
         </section>
-        <!-- end of wpo-features-section -->
-         <!-- start wpo-terms-section -->
-        <section class="wpo-terms-section section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="wpo-terms-wrap">
-                            <div class="wpo-terms-text">
-                                <h2 style="color: #f56a2f;">Why Choose Us As Your Plumbing Team?</h2>
-                                <p>Looking for professional plumbing services? Our dedicated team with a lot of plumbing experience based in southern california can do many plumbing jobs to help you out.We will make sure you receive a top-notch service with the help of technology like a video camera inspection and many other plumbing tech.We will provide you with reliable solutions that will give your plumbing a extended lifespan.</p>
-                                <ul>
-                                    <li>Decades of experience with effective solutions.</li>
-                                    <li>A business with respect and many great customer reviews.</li>
-                                    <li>Many high-quality services for commercial properties and residential properties.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end of wpo-term-section -->
-
-        <!-- start wpo-service-section -->
-        <section class="wpo-service-section section-padding">
+        <!-- end of wpo-hero-slide-section-->
+        <!-- start of wpo-service-section -->
+        <section class="wpo-service-section section-padding decor-container" style="background-color: #d3d3d3;">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-5">
@@ -279,89 +455,93 @@
                             <h2>Best Service We Offer</h2>
                         </div>
                     </div>
-                    <div class="wpo-terms-text" style="padding-bottom: 40px; text-align: center; ">
-                        <p>We offer many specialized services that will leave you with a smile on your face.We can use video camera inspections to check for any pipe damage.Then we do some pipe repairs for issues like rusty water.<br><br>If you have clogged drains we can help you with that too whe can do some drain cleaning for any type of issue like garbage disposals at any place like a commercial kitchen.Any type of major leak or hidden leaks that may come with the risk of water damage or any mold growth can be fixed real quick with our emergency services.</p>
+                    <div class="wpo-terms-text" style="padding-bottom: 40px; text-align: center;">
+                        <p>We offer many specialized services that will leave you with a smile on your face. We can use video camera inspections to check for any pipe damage. Then we do some pipe repairs for issues like rusty water.<br><br>If you have clogged drains we can help you with that too we can do some drain cleaning for any type of issue like garbage disposals at any place like a commercial kitchen. Any type of major leak or hidden leaks that may come with the risk of water damage or any mold growth can be fixed real quick with our emergency services.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12">
-                         <div class="wpo-service-item">
-                             <div class="wpo-service-img">
-                                 <img src="assets/images/kitchenplum.jpg" alt="">
-                             </div>
-                             <div class="wpo-service-text">
-                                  <h2><a href="kitchen-plumbing.html">Kitchen Plumbing</a></h2>
-                                  <p>Make sure your kitchen plumbing is done well and by skilled plumbers.repairs for sinks, garbage disposals, and dishwashers. We fix leaks, clogs, and handle new installations.</p>
-                             </div>
-                         </div>
+                        <div class="wpo-service-item">
+                            <div class="wpo-service-img">
+                                <img src="assets/images/kitchenplum.jpg" alt="">
+                            </div>
+                            <div class="wpo-service-text">
+                                <h2><a href="kitchen-plumbing.html">Kitchen Plumbing</a></h2>
+                                <p>Make sure your kitchen plumbing is done well and by skilled plumbers. Repairs for sinks, garbage disposals, and dishwashers. We fix leaks, clogs, and handle new installations.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
-                         <div class="wpo-service-item">
-                             <div class="wpo-service-img">
-                                 <img src="assets/images/gazplum.jpg" alt="">
-                             </div>
-                             <div class="wpo-service-text">
-                                  <h2><a href="gas-line-services.html">Gas Line Services</a></h2>
-                                  <p>Make sure your gas line is well done by qualified plumbers.A gas line installation  or a gas line repair this team with experienced plumbers can do it all so that you are happy.</p>
-                             </div>
-                         </div>
+                        <div class="wpo-service-item">
+                            <div class="wpo-service-img">
+                                <img src="assets/images/gazplum.jpg" alt="">
+                            </div>
+                            <div class="wpo-service-text">
+                                <h2><a href="gas-line-services.html">Gas Line Services</a></h2>
+                                <p>Make sure your gas line is well done by qualified plumbers. A gas line installation or a gas line repair this team with experienced plumbers can do it all so that you are happy.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
-                         <div class="wpo-service-item">
-                             <div class="wpo-service-img">
-                                 <img src="assets/images/pipplum.jpg" alt="">
-                             </div>
-                             <div class="wpo-service-text">
-                                  <h2><a href="water-line-repair.html">Water Line Repair</a></h2>
-                                  <p>Make sure your water lines are well done by professional plumbers to make sure there are no water leaks that may cause any dip in water pressure or any issues with water heaters.</p>
-                             </div>
-                         </div>
+                        <div class="wpo-service-item">
+                            <div class="wpo-service-img">
+                                <img src="assets/images/pipplum.jpg" alt="">
+                            </div>
+                            <div class="wpo-service-text">
+                                <h2><a href="water-line-repair.html">Water Line Repair</a></h2>
+                                <p>Make sure your water lines are well done by professional plumbers to make sure there are no water leaks that may cause any dip in water pressure or any issues with water heaters.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
-                         <div class="wpo-service-item">
-                             <div class="wpo-service-img">
-                                 <img src="assets/images/bathplum.jpg" alt="">
-                             </div>
-                             <div class="wpo-service-text">
-                                  <h2><a href="emergency-services.html">Emergency Services</a></h2>
-                                  <p>Make sure your plumbing is always in a good condition with our emergency plumbing services.We come fast with our 24-hour emergency plumbing.</p>
-                             </div>
-                         </div>
+                        <div class="wpo-service-item">
+                            <div class="wpo-service-img">
+                                <img src="assets/images/bathplum.jpg" alt="">
+                            </div>
+                            <div class="wpo-service-text">
+                                <h2><a href="emergency-services.html">Emergency Services</a></h2>
+                                <p>Make sure your plumbing is always in a good condition with our emergency plumbing services. We come fast with our 24-hour emergency plumbing.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
-                         <div class="wpo-service-item">
-                             <div class="wpo-service-img">
-                                 <img src="assets/images/basmentplum.jpg" alt="">
-                             </div>
-                             <div class="wpo-service-text">
-                                  <h2><a href="basement-plumbing.html">Basement Plumbing</a></h2>
-                                  <p>Make sure your basement has great plumbing that will last.If you need drain line replacement or sewer line repair which are common plumbing issues.</p>
-                             </div>
-                         </div>
+                        <div class="wpo-service-item">
+                            <div class="wpo-service-img">
+                                <img src="assets/images/basmentplum.jpg" alt="">
+                            </div>
+                            <div class="wpo-service-text">
+                                <h2><a href="basement-plumbing.html">Basement Plumbing</a></h2>
+                                <p>Make sure your basement has great plumbing that will last. If you need drain line replacement or sewer line repair which are common plumbing issues.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
-                         <div class="wpo-service-item">
-                             <div class="wpo-service-img">
-                                 <img src="assets/images/remodelplum.jpg" alt="">
-                             </div>
-                             <div class="wpo-service-text">
-                                  <h2><a href="remodeling-service.html">Remodeling Service</a></h2>
-                                  <p>Make sure your remodeling comes with great plumbing.From toilet installations to tankless water heaters installation at a fair price we do it all if you need it.</p>
-                                  
-                             </div>
-                         </div>
+                        <div class="wpo-service-item">
+                            <div class="wpo-service-img">
+                                <img src="assets/images/remodelplum.jpg" alt="">
+                            </div>
+                            <div class="wpo-service-text">
+                                <h2><a href="remodeling-service.html">Remodeling Service</a></h2>
+                                <p>Make sure your remodeling comes with great plumbing. From toilet installations to tankless water heaters installation at a fair price we do it all if you need it.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Service section decorative elements -->
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image service-decor-image1" alt="Tools Image">
+                <img src="assets/images/icon/10.png" class="decor-image service-decor-image2" alt="Pipe Image">
+                <img src="assets/images/icon/66.png" class="decor-image service-decor-image3" alt="Wrench Image">
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image service-decor-image4" alt="Water Image">
             </div>
         </section>
         <!-- end of wpo-service-section -->
         <!-- start wpo-fun-fact-section -->
-        <section class="wpo-fun-fact-section-s2 section-padding">
+        <section class="wpo-fun-fact-section-s2 section-padding decor-container">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col col-lg-12">
                         <div class="wpo-fun-fact-grids clearfix">
-                            <div class="grid">
+                            <div class="grid" style="background-color:red;">
                                 <div class="icon">
                                     <img src="assets/images/icon/9.png" alt="">
                                 </div>
@@ -370,7 +550,7 @@
                                     <p>Services</p>
                                 </div>
                             </div>
-                            <div class="grid">
+                            <div class="grid" style="background-color:red;">
                                 <div class="icon">
                                     <img src="assets/images/icon/10.png" alt="">
                                 </div>
@@ -379,7 +559,7 @@
                                     <p>Team</p>
                                 </div>
                             </div>
-                            <div class="grid">
+                            <div class="grid" style="background-color:red;">
                                 <div class="icon">
                                     <img src="assets/images/icon/11.png" alt="">
                                 </div>
@@ -388,7 +568,7 @@
                                     <p>Happy Clients</p>
                                 </div>
                             </div>
-                            <div class="grid">
+                            <div class="grid" style="background-color:red;">
                                 <div class="icon">
                                     <img src="assets/images/icon/12.png" alt="">
                                 </div>
@@ -400,93 +580,95 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- end container -->
+                <!-- Fun fact section decorative elements -->
+                <img src="assets/images/icon/4.png" class="decor-image funfact-decor-image1" alt="Valve Image">
+                <img src="assets/images/icon/8.png" class="decor-image funfact-decor-image2" alt="Pipe-Valve Image">
+            </div>
         </section>
         <!-- end wpo-fun-fact-section -->
-         <!-- start wpo-terms-section -->
-        <section class="wpo-terms-section section-padding">
+        <!-- start wpo-terms-section -->
+        <section class="wpo-terms-section section-padding decor-container" style="background-color: #d3d3d3;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="wpo-terms-wrap">
                             <div class="wpo-faq-section">
-                                <h4 style="color: #f56a2f;">Frequently Ask Questions</h4>
+                                <h4 style="color: #FF2B32">Frequently Ask Questions</h4>
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-12">
                                         <div class="accordion" id="accordionExample">
                                             <div class="accordion-item">
-                                              <h3 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #f56a2f;">
-                                                    Do you offer emergency plumbing services?
-                                                </button>
-                                              </h3>
-                                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Yes, we offer emergency repairs if needed. We will get there quickly to help you guys with any urgent issues.We can help with most plumbing emergencies whether it's a major plumbing emergency or a plumbing systems issue we can help real fast.</p>
+                                                <h3 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #FF2B32;">
+                                                        Do you offer emergency plumbing services?
+                                                    </button>
+                                                </h3>
+                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <p>Yes, we offer emergency repairs if needed. We will get there quickly to help you guys with any urgent issues. We can help with most plumbing emergencies whether it's a major plumbing emergency or a plumbing systems issue we can help real fast.</p>
+                                                    </div>
                                                 </div>
-                                              </div>
                                             </div>
                                             <div class="accordion-item">
-                                              <h3 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: #f56a2f;">
-                                                    What areas do you serve?
-                                                </button>
-                                              </h3>
-                                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>We serve many areas, from nearby cities to Covina. We do it all.We do West Covina,Baldwin Park and many more areas in southern california.</p>
+                                                <h3 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: #FF2B32;">
+                                                        What areas do you serve?
+                                                    </button>
+                                                </h3>
+                                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <p>We serve many areas, from nearby cities to Covina. We do it all. We do West Covina, Baldwin Park and many more areas in southern california.</p>
+                                                    </div>
                                                 </div>
-                                              </div>
                                             </div>
                                             <div class="accordion-item">
-                                              <h3 class="accordion-header" id="headingFour">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color: #f56a2f;">
-                                                    Do you have a water heater services?
-                                                </button>
-                                              </h3>
-                                              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>Any issues that have to do with water lines we got it. From needing improved water pressure to a water heater repair our water line repair service will do the job.</p>
+                                                <h3 class="accordion-header" id="headingFour">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color: #FF2B32;">
+                                                        Do you have a water heater services?
+                                                    </button>
+                                                </h3>
+                                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <p>Any issues that have to do with water lines we got it. From needing improved water pressure to a water heater repair our water line repair service will do the job.</p>
+                                                    </div>
                                                 </div>
-                                              </div>
                                             </div>
-                                              <div class="accordion-item">
+                                            <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingSix">
-                                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: #f56a2f;">
-                                                    Can you detect and repair slab leaks?
-                                                  </button>
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: #FF2B32;">
+                                                        Can you detect and repair slab leaks?
+                                                    </button>
                                                 </h3>
                                                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                                                  <div class="accordion-body">
-                                                      <p>Yes we can.We can find any signs of leaks before any major damage and we will find reliable plumbing solutions with our diagnostic tools that will leave you satisfied.</p>
-                                                      </p>
-                                                  </div>
+                                                    <div class="accordion-body">
+                                                        <p>Yes we can. We can find any signs of leaks before any major damage and we will find reliable plumbing solutions with our diagnostic tools that will leave you satisfied.</p>
+                                                    </div>
                                                 </div>
-                                              </div>
-                                              <div class="accordion-item">
+                                            </div>
+                                            <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingSeven">
-                                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="color: #f56a2f;">
-                                                    Are your prices upfront, or do you charge hidden fees?
-                                                  </button>
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="color: #FF2B32;">
+                                                        Are your prices upfront, or do you charge hidden fees?
+                                                    </button>
                                                 </h3>
                                                 <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                                                  <div class="accordion-body">
-                                                      <p>We are a team of trusted plumbers with many wonderful reviews.With detailed cost estimates and no hidden fees we will take good care of you.</p>
-                                                  </div>
+                                                    <div class="accordion-body">
+                                                        <p>We are a team of trusted plumbers with many wonderful reviews. With detailed cost estimates and no hidden fees we will take good care of you.</p>
+                                                    </div>
                                                 </div>
-                                              </div>
-                                              <div class="accordion-item">
+                                            </div>
+                                            <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingEight">
-                                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" style="color: #f56a2f;">
-                                                    What’s included in your drain cleaning services?
-                                                  </button>
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" style="color: #FF2B32;">
+                                                        What’s included in your drain cleaning services?
+                                                    </button>
                                                 </h3>
                                                 <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-                                                  <div class="accordion-body">
-                                                      <p>With the help of hydro jetting and the help of other advanced equipment any drain issue can be fixed.It would be a good idea to also have an annual drain cleaning for the safety of your home.</p>
-                                                  </div>
+                                                    <div class="accordion-body">
+                                                        <p>With the help of hydro jetting and the help of other advanced equipment any drain issue can be fixed. It would be a good idea to also have an annual drain cleaning for the safety of your home.</p>
+                                                    </div>
                                                 </div>
-                                              </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -494,16 +676,20 @@
                         </div>
                     </div>
                 </div>
+                <!-- FAQ section decorative elements -->
+                <img src="assets/images/icon/3.png" class="decor-image faq-decor-image1" alt="Tools Image">
+                <img src="assets/images/icon/12.png" class="decor-image faq-decor-image2" alt="Wrench Image">
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image faq-decor-image3" alt="Water Image">
             </div>
         </section>
-        <!-- end of wpo-term-section -->
+        <!-- end of wpo-terms-section -->
         <!-- start wpo-projects -->
-        <section class="wpo-projects section-padding">
+        <section class="wpo-projects section-padding decor-container" style="background-color: #d3d3d3;">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6">
                         <div class="wpo-section-title">
-                            <h2 style="color: #f56a2f;">Our Latest Project</h2>
+                            <h2 style="color: #FF2B32;">Our Latest Project</h2>
                         </div>
                     </div>
                 </div>
@@ -639,143 +825,150 @@
                         </div>
                     </div>
                 </div>
+                <!-- Projects section decorative elements -->
+                <img src="assets/images/icon/6.png" class="decor-image projects-decor-image1" alt="Pipe Image">
+                <img src="assets/images/icon/9.png" class="decor-image projects-decor-image2" alt="Tools Image">
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image projects-decor-image3" alt="Wrench Image">
             </div>
         </section>
         <!-- end wpo-projects -->
-        <!--Start wpo-testimonials-section-->
-        <!--Start wpo-testimonials-section-->
-<section class="wpo-testimonials-section section-padding">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6">
-                <div class="wpo-section-title">
-                    <h2 style="color: #f56a2f;">What People’s Say</h2>
-                    <p>homeowners trust us for fast, friendly service. We take pride in clean work and lasting repairs that keep customers happy.</p>
+        <!-- Start wpo-testimonials-section -->
+        <section class="wpo-testimonials-section section-padding decor-container" style="background-color: #d3d3d3;">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="wpo-section-title">
+                            <h2 style="color: #FF2B32;">What People’s Say</h2>
+                            <p>homeowners trust us for fast, friendly service. We take pride in clean work and lasting repairs that keep customers happy.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-xl-12 col-lg-12">
-                <div class="testimonials-wrapper owl-carousel">
-                    <div class="testimonials-item">
-                        <div class="testimonials-item-top">
-                            <div class="reviewer-info">
-                                <img src="assets/images/icon/dog.png" alt="Crystal" class="reviewer-profile-pic" style="height: 40px ; width: auto;">
-                                <div class="reviewer-details">
-                                    <h3>Crystal</h3>
-                                    <div class="rating">
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="review-date">January 2025</span>
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="testimonials-wrapper owl-carousel">
+                            <div class="testimonials-item">
+                                <div class="testimonials-item-top">
+                                    <div class="reviewer-info">
+                                        <img src="assets/images/icon/dog.png" alt="Crystal" class="reviewer-profile-pic" style="height: 40px; width: auto;">
+                                        <div class="reviewer-details">
+                                            <h3>Crystal</h3>
+                                            <div class="rating">
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="review-date">January 2025</span>
+                                            </div>
+                                            <br>
+                                        </div>
                                     </div>
-                                    <br>
-                                </div>
-                            </div>
-                            <p>Thank you Jesus!! Fixed the leaking pipe with  Great service!! He is reliable and professional. Very grateful for your service.</p>
-                            <div class="review-source">
-                                <br>
-                                <img src="assets/images/icon/google.png" alt="Google Logo" class="source-logo" style="height: 20px ; width: auto;">
-                                <br>
-                                <span>Posted On Google</span>
-                            </div>
-                        </div>
-                        <div class="testimonials-item-bottom">
-                            <div class="testimonials-item-bottom-author-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonials-item">
-                        <div class="testimonials-item-top">
-                            <div class="reviewer-info">
-                                <img src="assets/images/icon/alone.png" alt="Jazmin Lopez" class="reviewer-profile-pic" style="height: 40px ; width: auto;">
-                                <div class="reviewer-details">
-                                    <h3>Jazmin Lopez</h3>
-                                    <div class="rating">
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="review-date">May 2024</span>
-                                    </div>
-                                    <br>
-                                </div>
-                            </div>
-                            <p>I got to say I was very hesitant on calling a plumber for work I needed done in my new home Called Finest Rooter and Plumbing because I needed a water filtration system and softener in my home. Richard came out provided me with multiple solutions and options on which ones he recommended for my new home.He was very knowledgeable and professional with his presentation and me and my husband feel comfortable. He followed up with me and kept me informed every step of the way with the project from A-Z. I would be calling them back for future work and will recommend them to friends and family.</p>
-                            <div class="review-source">
-                                <br>
-                                <img src="assets/images/icon/google.png" alt="Google Logo" class="source-logo" style="height: 20px ; width: auto;">
-                                <br>
-                                <span>Posted On Google</span>
-                            </div>
-                        </div>
-                        <div class="testimonials-item-bottom">
-                            <div class="testimonials-item-bottom-author-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonials-item">
-                        <div class="testimonials-item-top">
-                            <div class="reviewer-info">
-                                <img src="assets/images/icon/kid.png" alt="Veronica Jimenez" class="reviewer-profile-pic" style="height: 40px ; width: auto;">
-                                <div class="reviewer-details">
-                                    <h3>Veronica Jimenez</h3>
-                                    <div class="rating">
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="star">★</span>
-                                        <span class="review-date">December 2024</span>
+                                    <p>Thank you Jesus!! Fixed the leaking pipe with Great service!! He is reliable and professional. Very grateful for your service.</p>
+                                    <div class="review-source">
+                                        <br>
+                                        <img src="assets/images/icon/google.png" alt="Google Logo" class="source-logo" style="height: 20px; width: auto;">
+                                        <br>
+                                        <span>Posted On Google</span>
                                     </div>
                                 </div>
-                                <br>
+                                <div class="testimonials-item-bottom">
+                                    <div class="testimonials-item-bottom-author-text"></div>
+                                </div>
                             </div>
-                            <p>I had a sewer line back up that I knew was due to roots in my system after saving enough money I had the finest plumbers come out and take care of the roots from growing into my system, they walked me threw all my options and I picked the solution that fitted my budget they are very honest and professional. Will refer them to all my family and friends ! They are truly the Finest Rooters & Plumbers in town .</p>
-                            <div class="review-source">
-                                <br>
-                                <img src="assets/images/icon/google.png" alt="Google Logo" class="source-logo" style="height: 20px ; width: auto;">
-                                <br>
-                                <span>Posted On Google</span>
+                            <div class="testimonials-item">
+                                <div class="testimonials-item-top">
+                                    <div class="reviewer-info">
+                                        <img src="assets/images/icon/alone.png" alt="Jazmin Lopez" class="reviewer-profile-pic" style="height: 40px; width: auto;">
+                                        <div class="reviewer-details">
+                                            <h3>Jazmin Lopez</h3>
+                                            <div class="rating">
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="review-date">May 2024</span>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <p>I got to say I was very hesitant on calling a plumber for work I needed done in my new home Called Finest Rooter and Plumbing because I needed a water filtration system and softener in my new home. Richard came out provided me with multiple solutions and options on which ones he recommended for my new home. He was very knowledgeable and professional with his presentation and me and my husband feel comfortable. He followed up with me and kept me informed every step of the way with the project from A-Z. I would be calling them back for future work and will recommend them to friends and family.</p>
+                                    <div class="review-source">
+                                        <br>
+                                        <img src="assets/images/icon/google.png" alt="Google Logo" class="source-logo" style="height: 20px; width: auto;">
+                                        <br>
+                                        <span>Posted On Google</span>
+                                    </div>
+                                </div>
+                                <div class="testimonials-item-bottom">
+                                    <div class="testimonials-item-bottom-author-text"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="testimonials-item-bottom">
-                            <div class="testimonials-item-bottom-author-text">
+                            <div class="testimonials-item">
+                                <div class="testimonials-item-top">
+                                    <div class="reviewer-info">
+                                        <img src="assets/images/icon/kid.png" alt="Veronica Jimenez" class="reviewer-profile-pic" style="height: 40px; width: auto;">
+                                        <div class="reviewer-details">
+                                            <h3>Veronica Jimenez</h3>
+                                            <div class="rating">
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="review-date">December 2024</span>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <p>I had a sewer line back up that I knew was due to roots in my system after saving enough money I had the finest plumbers come out and take care of the roots from growing into my system, they walked me threw all my options and I picked the solution that fitted my budget they are very honest and professional. Will refer them to all my family and friends! They are truly the Finest Rooters & Plumbers in town.</p>
+                                    <div class="review-source">
+                                        <br>
+                                        <img src="assets/images/icon/google.png" alt="Google Logo" class="source-logo" style="height: 20px; width: auto;">
+                                        <br>
+                                        <span>Posted On Google</span>
+                                    </div>
+                                </div>
+                                <div class="testimonials-item-bottom">
+                                    <div class="testimonials-item-bottom-author-text"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Testimonials section decorative elements -->
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image testimonials-decor-image1" alt="Pipe Image">
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-imagex testimonials-decor-image2" alt="Tools Image">
+                <img src="assets/images/icon/66.png" class="decor-image testimonials-decor-image3" alt="Water Image">
             </div>
-        </div> <!-- end row -->
-    </div>
-</section>
-        <!--End wpo-testimonials-section-->
-
-        <section class="wpo-terms-section section-padding">
+        </section>
+        <!-- End wpo-testimonials-section -->
+        <!-- start wpo-terms-section -->
+        <section class="wpo-terms-section section-padding decor-container" style="background-color: #d3d3d3;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="wpo-terms-wrap">
                             <div class="wpo-terms-text">
-                                <h2 style="color: #f56a2f;">Contact Covina’s Trusted Plumbing Experts Today!</h2>
-                                <p>For a great same-day service,emergency repairs, or preventative maintenance, call Finest Rooter & Plumbing to help you out with your plumbing issues.</p>
+                                <h2 style="color: #FF2B32;">Contact Covina’s Trusted Plumbing Experts Today!</h2>
+                                <p>For a great same-day service, emergency repairs, or preventative maintenance, call Finest Rooter & Plumbing to help you out with your plumbing issues.</p>
                                 <ul>
                                     <li>24/7 Emergency Hotline</li>
                                     <li>Schedule service online</li>
                                     <li>Serving Covina & surrounding communities like West Covina</li>
                                 </ul>
-                                <p>Our licensed plumbers are ready to solve your plumbing problems with quality service and exceptional customer care. Don’t wait call now for fast and reliable solutions!</p>
+                                <p>Our licensed plumbers are ready to solve your plumbing problems with quality service and exceptional customer care. Don’t wait call now for fast and reliable solutions!</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Contact section decorative elements -->
+                <img src="assets/images/icon/10.png" class="decor-image contact-decor-image1" alt="Wrench Image">
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image contact-decor-image2" alt="Pipe-Valve Image">
             </div>
         </section>
         <!-- start of wpo-site-footer-section -->
-        <footer class="wpo-site-footer">
+        <footer class="wpo-site-footer decor-container">
             <div class="wpo-upper-footer">
                 <div class="container">
                     <div class="row">
@@ -784,8 +977,9 @@
                                 <div class="logo widget-title">
                                     <img src="assets/images/roofingfinest/logofine2.png" alt="Bear" style="height: 110px; width: auto;">
                                 </div>
+                                <p>plumbing license: #1127665</p>
                                 <p>Management Plumbing includes a broad range of activities, and the many firms and their members often define these practices.</p>
-                                <ul style="display: flex; list-style: none; padding: 0; background-color: #f56a2f; height: 40px; align-items: center;">
+                                <ul style="display: flex; list-style: none; padding: 0; background-color: #FF2B32; height: 40px; align-items: center;">
                                     <li style="margin: 0 10px;">
                                         <a href="https://www.instagram.com/finestrooterandplumbing/">
                                             <i class="ti-instagram" style="font-size: 20px; color: black;"></i>
@@ -826,7 +1020,6 @@
                                 </ul>
                             </div>
                         </div>
-                        
                         <div class="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div class="widget instagram">
                                 <div class="widget-title">
@@ -836,15 +1029,17 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
+                <!-- Footer decorative elements -->
+                <img src="assets/images/icon/12.png" class="decor-image footer-decor-image2" alt="Pipe Image">
+                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image footer-decor-image4" alt="Water Image">
             </div>
         </footer>
         <!-- end of wpo-site-footer-section -->
     </div>
     <!-- end of page-wrapper -->
 
-    <!-- All JavaScript files
-    ================================================== -->
+    <!-- All JavaScript files -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Plugins for this template -->
@@ -855,58 +1050,50 @@
     <script src="assets/js/script.js"></script>
     <script>
         function handleSectionDisplay() {
-          const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
-          const pcSection = document.getElementById('pc-only');
-          const mobileSection = document.getElementById('mobile-only');
-          
-          if (isMobile) {
-            if (pcSection) pcSection.style.display = 'none';
-            if (mobileSection) mobileSection.style.display = 'block';
-          } else {
-            if (pcSection) pcSection.style.display = 'block';
-            if (mobileSection) mobileSection.style.display = 'none';
-          }
+            const isMobile = window.innerWidth <= 768;
+            const pcSection = document.getElementById('pc-only');
+            const mobileSection = document.getElementById('mobile-only');
+            
+            if (isMobile) {
+                if (pcSection) pcSection.style.display = 'none';
+                if (mobileSection) mobileSection.style.display = 'block';
+            } else {
+                if (pcSection) pcSection.style.display = 'block';
+                if (mobileSection) mobileSection.style.display = 'none';
+            }
         }
       
-        // Run on load and resize
         window.addEventListener('load', handleSectionDisplay);
         window.addEventListener('resize', handleSectionDisplay);
-      </script>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-      <script type="text/javascript">
-          (function(){
-              emailjs.init("o-PEn9XetLy00clG2");
-          })();
-          </script>
-      <script>
-      function sendEmail() {
-          
-          var name = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-          var phone = document.getElementById("phone").value;
-          var message = document.getElementById("message").value;
-          
-      
-          // Sending email using EmailJS
-          emailjs.send("service_wlpqesg", "template_yq5c94t", {
-              name: name,
-              email: email,
-              phone: phone,
-              subject : "Finest Rooter & Plumbing Quote",
-              message: message,
-              business_name : "Finest Rooter & Plumbing",
-              client_email : "finestrooterplumbing@gmail.com"
-          })
-          .then(function(response) {
-              // Email sent successfully
-              alert("Message sent, thank you " + name);
-          }, function(error) {
-              // Email sending failed
-              console.error("Email sending error:", error);
-          });
-      }
-      </script>
-      
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("o-PEn9XetLy00clG2");
+        })();
+    </script>
+    <script>
+    function sendEmail() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+        
+        emailjs.send("service_wlpqesg", "template_yq5c94t", {
+            name: name,
+            email: email,
+            phone: phone,
+            subject: "Finest Rooter & Plumbing Quote",
+            message: message,
+            business_name: "Finest Rooter & Plumbing",
+            client_email: "finestrooterplumbing@gmail.com"
+        })
+        .then(function(response) {
+            alert("Message sent, thank you " + name);
+        }, function(error) {
+            console.error("Email sending error:", error);
+        });
+    }
+    </script>
 </body>
-
 </html>

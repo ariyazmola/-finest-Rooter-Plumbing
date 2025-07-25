@@ -97,7 +97,7 @@ html {
 
 body {
   font-family: "Muli";
-  color: #4c5165;
+  color: black;
   background-color: #fff;
   font-size: 15px;
   font-size: 1rem;
@@ -111,7 +111,7 @@ body {
 
 p {
   font-size: 16px;
-  color: #4c5165;
+  color: black;
   line-height: 1.8em;
 }
 
@@ -161,6 +161,7 @@ a:hover {
 
 .section-padding {
   padding: 120px 0;
+  background-color: #d3d3d3;
 }
 @media (max-width: 767px) {
   .section-padding {
@@ -241,11 +242,11 @@ a:hover {
 
 /*** back to top **/
 .back-to-top {
-  background-color: rgba(0, 82, 218, 0.7);
+  background-color: rgba(255, 0, 0, 0.4);
   width: 45px;
   height: 45px;
   line-height: 45px;
-  border: 2px solid #0052da;
+  border: 2px solid #FF2B32;
   border-radius: 45px;
   text-align: center;
   display: none;
@@ -263,7 +264,7 @@ a:hover {
   }
 }
 .back-to-top:hover {
-  background-color: #0052da;
+  background-color: #FF2B32;
 }
 
 .back-to-top i {
@@ -381,7 +382,7 @@ a:hover {
 }
 
 .theme-btn, .theme-btn-s3, .theme-btn-s4 {
-  background: #4287f5;
+  background: #FF2B32;
   color: black;
   display: inline-block;
   font-weight: 400;
@@ -398,7 +399,7 @@ a:hover {
   border-radius: 8px;
 }
 .theme-btn:hover, .theme-btn-s3:hover, .theme-btn-s4:hover, .theme-btn:focus, .theme-btn-s3:focus, .theme-btn-s4:focus, .theme-btn:active, .theme-btn-s3:active, .theme-btn-s4:active {
-  background: #0041ac;
+  background: #ff474c;
   color: #fff;
 }
 .theme-btn:hover:after, .theme-btn-s3:hover:after, .theme-btn-s4:hover:after {
@@ -619,7 +620,7 @@ a:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #4287f5;
+  background: #ff474c;
   content: "";
   z-index: -1;
   opacity: 0.6;
@@ -684,7 +685,7 @@ a:hover {
 }
 
 .preloader {
-  background-color: #f56a2f;
+  background-color: #FF2B32;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -1391,8 +1392,8 @@ a:hover {
 }
 
 .wpo-site-header .navigation {
-  box-shadow: 0 -5px 15px #f56a2f;
-  background-color: #f56a2f;
+  box-shadow: 0 -5px 15px #FF2B32;
+  background-color: #FF2B32;
   margin-bottom: 0;
   padding: 0;
   border: 0;
@@ -1457,7 +1458,7 @@ a:hover {
     transform: translateY(-50%);
     width: 100%;
     height: 40px;
-    background: #4287f5;
+    background: #ff474c;
     content: "";
     opacity: 0;
     visibility: hidden;
@@ -1551,7 +1552,7 @@ a:hover {
 
   .wpo-site-header #navbar ul a:hover,
 .wpo-site-header #navbar ul li.current a {
-    color: #0052da;
+    color: #f0e8d4;
   }
 
   .wpo-site-header #navbar .close-navbar .ti-close {
@@ -1674,7 +1675,7 @@ a:hover {
 }
 
 .wpo-site-header .header-right .search-toggle-btn {
-  background-color: #4287f5;
+  background-color: #ff474c;
   line-height: 0.66em;
   color: #232f4b;
   width: 55px;
@@ -1894,7 +1895,7 @@ a:hover {
   /*navbar collaps less then 992px*/
 }
 .wpo-site-header .navigation {
-  background-color: #f56a2f;
+  background-color: #FF2B32;
   margin-bottom: 0;
   padding: 0;
   border: 0;
@@ -1928,7 +1929,7 @@ a:hover {
     font-size: 18px;
     padding: 35px 20px;
     display: block;
-    color: #232f4b;
+    color: #f0e8d4;
     font-weight: 800;
     position: relative;
     z-index: 1;
@@ -2066,7 +2067,7 @@ a:hover {
     width: 100%;
   }
   .wpo-site-header .mobail-menu button {
-    background-color: #4287f5;
+    background-color: #ff474c;
     width: 40px;
     height: 35px;
     border: 0;
@@ -2090,7 +2091,7 @@ a:hover {
     margin: 0;
   }
   .wpo-site-header #navbar {
-    background: #1a222e;
+    background: #d3d3d3;
     display: block !important;
     width: 300px;
     height: 100%;
@@ -2944,7 +2945,7 @@ hero slider
 4. wpo-footer
 --------------------------------------------------------------*/
 .wpo-site-footer {
-  background: #f56a2f;
+  background: #FF2B32;
   position: relative;
   font-size: 15px;
   overflow: hidden;
@@ -3409,7 +3410,7 @@ hero slider
 }
 .wpo-service-section .wpo-service-item {
   padding: 30px;
-  background: #fa8b5c;
+  background: #FF2B32;
   border-radius: 20px;
   margin-bottom: 30px;
 }
@@ -3440,10 +3441,10 @@ hero slider
   margin-bottom: 20px;
 }
 .wpo-service-section .wpo-service-item .wpo-service-text h2 a {
-  color: #253041;
+  color: black;
 }
 .wpo-service-section .wpo-service-item .wpo-service-text h2 a:hover {
-  color: #0052da;
+  color: white;
 }
 @media (max-width: 1200px) {
   .wpo-service-section .wpo-service-item .wpo-service-text h2 {
@@ -4215,7 +4216,7 @@ hero slider
   background: #e4f0ff;
 }
 .wpo-features-section-s2 .wpo-features-wrap .wpo-features-item.active {
-  background: #f56a2f;
+  background: #FF2B32;
 }
 @media (max-width: 1200px) {
   .wpo-features-section-s2 .wpo-features-wrap .col .angle {
@@ -4333,7 +4334,7 @@ hero slider
   top: 0;
   width: 100%;
   height: 100%;
-  background: #f56a2f;
+  background: #ff474c;
   content: "";
   z-index: -1;
   opacity: 0.9;
@@ -4448,7 +4449,7 @@ hero slider
 
 /* 6. wpo-about-section */
 .wpo-about-section {
-  background: #f5f8fe;
+  background: #d3d3d3;
 }
 .wpo-about-section .wpo-about-img img {
   width: 100%;
@@ -4472,11 +4473,11 @@ hero slider
   font-size: 22px;
   font-family: "Muli";
   font-weight: 700;
-  color: #5c6c8c;
+  color: #FF2B32;
 }
 .wpo-about-section .wpo-about-content .signeture p {
   font-size: 16px;
-  color: #687693;
+  color: #ff474c;
   margin-bottom: 30px;
 }
 
@@ -4565,7 +4566,7 @@ hero slider
   }
 }
 .wpo-projects .projects-menu li a.current {
-  background-color: #f56a2f;
+  background-color: #FF2B32;
   color: #fff;
 }
 .wpo-projects .projects-grids {
@@ -4590,7 +4591,7 @@ hero slider
   position: relative;
 }
 .wpo-projects .grid .project-inner .hover-content {
-  background: rgba(66, 135, 245, 0.5); 
+  background: rgba(255, 0, 0, 0.4); 
   width: 100%;
   height: 100%;
   position: absolute;
@@ -5788,7 +5789,7 @@ hero slider
   top: 50%;
   width: 8px;
   height: 8px;
-  background: #4287f5;
+  background: #FF2B32;
   content: "";
   border-radius: 50%;
   transform: translateY(-50%);
@@ -6901,6 +6902,7 @@ hero slider
 }
 .wpo-contact-pg-section .office-info .office-info-item {
   text-align: center;
+  background-color: #FF2B32;
   box-shadow: 0px 5px 15px 0px rgba(62, 65, 159, 0.1);
   padding: 40px;
 }
@@ -6926,8 +6928,8 @@ hero slider
 }
 .wpo-contact-pg-section .wpo-contact-form-area {
   padding: 50px;
-  background: #fa8b5c;
-  box-shadow: 0px 1px 15px 0px #fa8b5c;
+  background: #ff474c;
+  box-shadow: 0px 1px 15px 0px #ff474c;
   padding-bottom: 0;
   margin-bottom: -125px;
   position: relative;
