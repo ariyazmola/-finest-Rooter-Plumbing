@@ -43,7 +43,7 @@
         border-radius: 4px;
     }
     .new-button-style {
-        background-color: #f0e8d4;
+        background-color: #d3d3d3;
         color: #7b3f15;
         padding: 12px 25px;
         border-radius: 25px;
@@ -251,6 +251,136 @@
             width: 150px !important;
         }
     }
+    /* Popup Styles */
+    /* Popup Styles - Enhanced */
+    /* Popup Styles - Mobile Optimized */
+    .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 200px 15px 150px 15px;
+            box-sizing: border-box;
+        }
+        
+        .popup-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            max-height: 70vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        }
+        
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #333;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        
+        .popup-title {
+            margin: 0 0 15px 0;
+            color: #333;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            font-size: 22px;
+        }
+        
+        .popup-image {
+            width: 100%;
+            height: 180px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .popup-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .license-badge {
+            background-color: #d3d3d3;
+            border-left: 4px solid #FF2B32;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            color: #FF2B32;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        
+        .service-area {
+            font-style: italic;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Larger screens */
+        @media (min-width: 768px) {
+            .popup-content {
+                padding: 30px;
+                max-width: 600px;
+            }
+            
+            .popup-title {
+                font-size: 26px;
+            }
+            
+            .popup-image {
+                height: 220px;
+            }
+            
+            .license-badge, 
+            .features-list li,
+            .service-area {
+                font-size: 16px;
+            }
+        }
 
 </style>
 <body>
@@ -319,7 +449,7 @@
         <section class="wpo-hero-slider decor-container">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="slide-inner slide-bg-image" style="background-color: #FF2B32;">
+                    <div class="slide-inner slide-bg-image" data-background="assets/images/main.jpg">
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
@@ -331,7 +461,7 @@
                                                     margin-top: 30px;
                                                     font-size: clamp(2rem, 7vw, 6rem);
                                                     font-family: 'Arial Black', sans-serif;
-                                                    color: #f0e8d4;
+                                                    color: #d3d3d3;
                                                     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
                                                     letter-spacing: 2px;
                                                     text-transform: uppercase;
@@ -343,7 +473,7 @@
                                             <br>
                                         </div>
                                         <div data-swiper-parallax="400" class="slide-text">
-                                            <p style="font-size: 14px; color: #f0e8d4;">We have been a standout Covina plumber for many years so we understand the unique plumbing issues you might have as a home owner or a business owner. We do a lot of work locally so we can get there quick for your emergency plumbing repairs. We can tackle a wide range of issues like gas leaks, sewer line issues and many more! You can have the peace of mind knowing our expert team will take great care of you for any expert plumbing services you might need from a major leak to a routine maintenance.</p>
+                                            <p style="font-size: 14px; color: white;">We have been a standout Covina plumber for many years so we understand the unique plumbing issues you might have as a home owner or a business owner. We do a lot of work locally so we can get there quick for your emergency plumbing repairs. We can tackle a wide range of issues like gas leaks, sewer line issues and many more! You can have the peace of mind knowing our expert team will take great care of you for any expert plumbing services you might need from a major leak to a routine maintenance.</p>
                                         </div>
                                         <div class="clearfix"></div>
                                         <div data-swiper-parallax="500" class="slide-btns">
@@ -463,7 +593,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="wpo-service-item">
                             <div class="wpo-service-img">
-                                <img src="assets/images/kitchenplum.jpg" alt="">
+                                <img src="assets/images/kitchen.jpg" alt="">
                             </div>
                             <div class="wpo-service-text">
                                 <h2><a href="kitchen-plumbing.html">Kitchen Plumbing</a></h2>
@@ -474,7 +604,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="wpo-service-item">
                             <div class="wpo-service-img">
-                                <img src="assets/images/gazplum.jpg" alt="">
+                                <img src="assets/images/gas.jpg" alt="">
                             </div>
                             <div class="wpo-service-text">
                                 <h2><a href="gas-line-services.html">Gas Line Services</a></h2>
@@ -485,7 +615,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="wpo-service-item">
                             <div class="wpo-service-img">
-                                <img src="assets/images/pipplum.jpg" alt="">
+                                <img src="assets/images/water.jpg" alt="">
                             </div>
                             <div class="wpo-service-text">
                                 <h2><a href="water-line-repair.html">Water Line Repair</a></h2>
@@ -496,7 +626,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="wpo-service-item">
                             <div class="wpo-service-img">
-                                <img src="assets/images/bathplum.jpg" alt="">
+                                <img src="assets/images/emergency.jpg" alt="">
                             </div>
                             <div class="wpo-service-text">
                                 <h2><a href="emergency-services.html">Emergency Services</a></h2>
@@ -507,7 +637,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="wpo-service-item">
                             <div class="wpo-service-img">
-                                <img src="assets/images/basmentplum.jpg" alt="">
+                                <img src="assets/images/basement.jpeg" alt="">
                             </div>
                             <div class="wpo-service-text">
                                 <h2><a href="basement-plumbing.html">Basement Plumbing</a></h2>
@@ -518,7 +648,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="wpo-service-item">
                             <div class="wpo-service-img">
-                                <img src="assets/images/remodelplum.jpg" alt="">
+                                <img src="assets/images/remodeling.jpg" alt="">
                             </div>
                             <div class="wpo-service-text">
                                 <h2><a href="remodeling-service.html">Remodeling Service</a></h2>
@@ -833,13 +963,13 @@
         </section>
         <!-- end wpo-projects -->
         <!-- Start wpo-testimonials-section -->
-        <section class="wpo-testimonials-section section-padding decor-container" style="background-color: #d3d3d3;">
+        <section class="wpo-testimonials-section section-padding decor-container" style="background-image: url('assets/images/pop2.jpeg');background-size: cover;background-position: center; position: relative;">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6">
                         <div class="wpo-section-title">
                             <h2 style="color: #FF2B32;">What People’s Say</h2>
-                            <p>homeowners trust us for fast, friendly service. We take pride in clean work and lasting repairs that keep customers happy.</p>
+                            <p style="color: white;">homeowners trust us for fast, friendly service. We take pride in clean work and lasting repairs that keep customers happy.</p>
                         </div>
                     </div>
                 </div>
@@ -941,6 +1071,15 @@
                 <img src="assets/images/roofingfinest/logofine2.png" class="decor-imagex testimonials-decor-image2" alt="Tools Image">
                 <img src="assets/images/icon/66.png" class="decor-image testimonials-decor-image3" alt="Water Image">
             </div>
+            <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        z-index: 1;
+            "></div>
         </section>
         <!-- End wpo-testimonials-section -->
         <!-- start wpo-terms-section -->
@@ -978,7 +1117,10 @@
                                     <img src="assets/images/roofingfinest/logofine2.png" alt="Bear" style="height: 110px; width: auto;">
                                 </div>
                                 <p>plumbing license: #1127665</p>
-                                <p>Management Plumbing includes a broad range of activities, and the many firms and their members often define these practices.</p>
+                                <p>Fully Licensed & Certified</p>
+                                <p>Flexible Financing Options Available</p>
+                                <p>24/7 Emergency Services</p>
+                                <p>Service Area: Serving all of Southern California</p>
                                 <ul style="display: flex; list-style: none; padding: 0; background-color: #FF2B32; height: 40px; align-items: center;">
                                     <li style="margin: 0 10px;">
                                         <a href="https://www.instagram.com/finestrooterandplumbing/">
@@ -1037,6 +1179,37 @@
         </footer>
         <!-- end of wpo-site-footer-section -->
     </div>
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <button class="close-popup" id="closePopup" aria-label="Close popup">&times;</button>
+            <h2 class="popup-title">Your Trusted Plumbing Professionals</h2>
+            
+            <div class="popup-image">
+                <!-- Replace with your actual image URL -->
+                <img src="assets/images/pop.jpeg" alt="Our Plumbing Team">
+            </div>
+            
+            <div class="license-badge">
+                <strong>Licensed • Bonded • Insured</strong><br>
+                California License #: <strong>1127665</strong>
+            </div>
+            
+            <ul class="features-list">
+                <li>Fully Licensed & Certified Technicians</li>
+                <li>Comprehensive Insurance Coverage</li>
+                <li>Flexible Financing Options Available</li>
+                <li>Same-Day Service Guarantee</li>
+                <li>24/7 Emergency Services</li>
+                <li>No Extra Charge for Nights/Weekends</li>
+                <li>Upfront Pricing - No Hidden Fees</li>
+            </ul>
+            
+            <div class="service-area">
+                <strong>Service Area:</strong> Serving all of Southern California including Los Angeles, 
+                Orange County, Riverside, San Bernardino, and surrounding areas.
+            </div>
+        </div>
+    </div>
     <!-- end of page-wrapper -->
 
     <!-- All JavaScript files -->
@@ -1094,6 +1267,42 @@
             console.error("Email sending error:", error);
         });
     }
+    </script>
+    <script>
+        // Show popup after slight delay
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var popup = document.getElementById('popup');
+                popup.style.display = 'flex';
+                
+                // Prevent background scrolling when popup is open
+                document.body.style.overflow = 'hidden';
+            }, 500);
+        });
+    
+        // Close functionality
+        document.getElementById('closePopup').addEventListener('click', function() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+    
+        // Close when tapping outside on mobile
+        document.getElementById('popup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    
+        // Prevent background scrolling when popup is open on touch devices
+        document.addEventListener('touchmove', function(e) {
+            if (document.getElementById('popup').style.display === 'flex') {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    </script>
+    
     </script>
 </body>
 </html>
