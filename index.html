@@ -27,14 +27,14 @@
 </head>
 <style>
     .form-container {
-        background: #FF2B32;
+        background: #D6282E;
         max-width: 400px;
         margin: 0 auto;
     }
     .quote-form input, .quote-form textarea {
         width: 100%;
         padding: 10px;
-        border: 1px solid #FF2B32;
+        border: 1px solid #D6282E;
         border-radius: 4px;
     }
     .quote-form button {
@@ -325,7 +325,7 @@
         
         .license-badge {
             background-color: #d3d3d3;
-            border-left: 4px solid #FF2B32;
+            border-left: 4px solid #D6282E;
             padding: 12px;
             margin-bottom: 15px;
             font-size: 14px;
@@ -347,7 +347,7 @@
         
         .features-list li:before {
             content: "✓";
-            color: #FF2B32;
+            color: #D6282E;
             font-weight: bold;
             margin-right: 10px;
             font-size: 16px;
@@ -403,7 +403,7 @@
         <!-- Start header -->
         <header id="header" class="decor-container">
             <div class="wpo-site-header">
-                <nav class="navigation navbar navbar-expand-lg navbar-light" style="background-color: #FF2B32;">
+                <nav class="navigation navbar navbar-expand-lg navbar-light" style="background-color: #D6282E;">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
@@ -435,7 +435,7 @@
                             <div class="col col-lg-3 col-md-2 col-2">
                                 <div class="header-right">
                                     <div class="close-form">
-                                        <a class="new-button-style" href="contact.html">GET FREE QUOTE</a>
+                                        <a class="new-button-style" href="tel:626-696-8298">(626) 696-8298</a>
                                     </div>
                                 </div>
                             </div>
@@ -449,23 +449,57 @@
         <section class="wpo-hero-slider decor-container">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="slide-inner slide-bg-image" data-background="assets/images/main.jpg">
+                        <div class="slide-inner slide-bg-image" style="background-image: url(assets/images/main.jpg);">
+                            <style>
+                                .slide-bg-image {
+                                  position: relative;
+                                  background-size: cover;
+                                  background-position: center;
+                                }
+                                
+                                /* Subtle overlay - barely noticeable but improves readability */
+                                .slide-bg-image::after {
+                                  content: "";
+                                  position: absolute;
+                                  top: 0;
+                                  left: 0;
+                                  width: 100%;
+                                  height: 100%;
+                                  background: rgba(0, 0, 0, 0.15); /* Very subtle 20% white overlay */
+                                  z-index: 0;
+                                }
+                                
+                                .slide-inner {
+                                  position: relative;
+                                  z-index: 1; /* Ensures content stays above the overlay */
+                                }
+                          </style>
                         <div class="container">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
                                     <div class="slide-content">
                                         <div data-swiper-parallax="300" class="slide-title" style="padding-top: 30px;">
                                             <h1>Plumbing Covina</h1>
+                                            <h2 class="titleseo">Your Trusted plumbers</h2>
                                             <style>
                                                 h1 {
                                                     margin-top: 30px;
-                                                    font-size: clamp(2rem, 7vw, 6rem);
+                                                    font-size: 20px;
                                                     font-family: 'Arial Black', sans-serif;
-                                                    color: #d3d3d3;
+                                                    color: #ffffff;
                                                     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
                                                     letter-spacing: 2px;
                                                     text-transform: uppercase;
                                                     font-weight: 900;
+                                                }
+                                                .titleseo {
+                                                    font-size: 50px;
+                                                    font-family: 'Arial Black', sans-serif;
+                                                    color: #d3d3d3;
+                                                    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+                                                    letter-spacing: 1px;
+                                                    text-transform: uppercase;
+                                                    
                                                 }
                                             </style>
                                             <br>
@@ -473,11 +507,7 @@
                                             <br>
                                         </div>
                                         <div data-swiper-parallax="400" class="slide-text">
-                                            <p style="font-size: 14px; color: white;">We have been a standout Covina plumber for many years so we understand the unique plumbing issues you might have as a home owner or a business owner. We do a lot of work locally so we can get there quick for your emergency plumbing repairs. We can tackle a wide range of issues like gas leaks, sewer line issues and many more! You can have the peace of mind knowing our expert team will take great care of you for any expert plumbing services you might need from a major leak to a routine maintenance.</p>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div data-swiper-parallax="500" class="slide-btns">
-                                            <a class="new-button-style" href="contact.html">BOOK ONLINE</a>
+                                            <p style="font-size: 17px; color: #ffff; margin-bottom: 70px;"><b>We have been a standout Covina plumber for many years so we understand the unique plumbing issues you might have as a home owner or a business owner. We do a lot of work locally so we can get there quick for your emergency plumbing repairs. We can tackle a wide range of issues like gas leaks, sewer line issues and many more! You can have the peace of mind knowing our expert team will take great care of you for any expert plumbing services you might need from a major leak to a routine maintenance.</b></p>
                                         </div>
                                     </div>
                                 </div>
@@ -497,7 +527,7 @@
                                             <div class="mb-3">
                                                 <textarea id="message" class="form-control" rows="4" placeholder="Describe Your Plumbing Issue" required></textarea>
                                             </div>
-                                            <button type="button" class="btn theme-btn w-100" onclick="sendEmail()" style="background-color: red;">Submit Quote</button>
+                                            <button type="button" class="btn theme-btn w-100" onclick="sendEmail()" style="background-color: #D6282E;">Submit Quote</button>
                                         </div>
                                     </div>
                                 </div>
@@ -598,6 +628,19 @@
                             <div class="wpo-service-text">
                                 <h2><a href="kitchen-plumbing.html">Kitchen Plumbing</a></h2>
                                 <p>Make sure your kitchen plumbing is done well and by skilled plumbers. Repairs for sinks, garbage disposals, and dishwashers. We fix leaks, clogs, and handle new installations.</p>
+                                <a class="new-button-style" href="kitchen-plumbing.html">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="wpo-service-item">
+                            <div class="wpo-service-img">
+                                <img src="assets/images/gasgas.png" alt="">
+                            </div>
+                            <div class="wpo-service-text">
+                                <h2><a href="gas-line-services.html">Gas Line Services</a></h2>
+                                <p>Make sure your gas line is well done by qualified plumbers. A gas line installation or a gas line repair this team with experienced plumbers can do it all so that you are happy.</p>
+                                <a class="new-button-style" href="gas-line-services.html">See More</a>
                             </div>
                         </div>
                     </div>
@@ -607,19 +650,9 @@
                                 <img src="assets/images/gas.jpg" alt="">
                             </div>
                             <div class="wpo-service-text">
-                                <h2><a href="gas-line-services.html">Gas Line Services</a></h2>
-                                <p>Make sure your gas line is well done by qualified plumbers. A gas line installation or a gas line repair this team with experienced plumbers can do it all so that you are happy.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="wpo-service-item">
-                            <div class="wpo-service-img">
-                                <img src="assets/images/water.jpg" alt="">
-                            </div>
-                            <div class="wpo-service-text">
                                 <h2><a href="water-line-repair.html">Water Line Repair</a></h2>
                                 <p>Make sure your water lines are well done by professional plumbers to make sure there are no water leaks that may cause any dip in water pressure or any issues with water heaters.</p>
+                                <a class="new-button-style" href="water-line-repair.html">See More</a>
                             </div>
                         </div>
                     </div>
@@ -631,6 +664,7 @@
                             <div class="wpo-service-text">
                                 <h2><a href="emergency-services.html">Emergency Services</a></h2>
                                 <p>Make sure your plumbing is always in a good condition with our emergency plumbing services. We come fast with our 24-hour emergency plumbing.</p>
+                                <a class="new-button-style" href="emergency-services.html">See More</a>
                             </div>
                         </div>
                     </div>
@@ -642,6 +676,7 @@
                             <div class="wpo-service-text">
                                 <h2><a href="basement-plumbing.html">Basement Plumbing</a></h2>
                                 <p>Make sure your basement has great plumbing that will last. If you need drain line replacement or sewer line repair which are common plumbing issues.</p>
+                                <a class="new-button-style" href="basement-plumbing.html">See More</a>
                             </div>
                         </div>
                     </div>
@@ -653,6 +688,7 @@
                             <div class="wpo-service-text">
                                 <h2><a href="remodeling-service.html">Remodeling Service</a></h2>
                                 <p>Make sure your remodeling comes with great plumbing. From toilet installations to tankless water heaters installation at a fair price we do it all if you need it.</p>
+                                <a class="new-button-style" href="remodeling-service.html">See More</a>
                             </div>
                         </div>
                     </div>
@@ -671,7 +707,7 @@
                 <div class="row align-items-center">
                     <div class="col col-lg-12">
                         <div class="wpo-fun-fact-grids clearfix">
-                            <div class="grid" style="background-color:red;">
+                            <div class="grid" style="background-color: #D6282E;">
                                 <div class="icon">
                                     <img src="assets/images/icon/9.png" alt="">
                                 </div>
@@ -680,7 +716,7 @@
                                     <p>Services</p>
                                 </div>
                             </div>
-                            <div class="grid" style="background-color:red;">
+                            <div class="grid" style="background-color: #D6282E;">
                                 <div class="icon">
                                     <img src="assets/images/icon/10.png" alt="">
                                 </div>
@@ -689,7 +725,7 @@
                                     <p>Team</p>
                                 </div>
                             </div>
-                            <div class="grid" style="background-color:red;">
+                            <div class="grid" style="background-color: #D6282E;">
                                 <div class="icon">
                                     <img src="assets/images/icon/11.png" alt="">
                                 </div>
@@ -698,7 +734,7 @@
                                     <p>Happy Clients</p>
                                 </div>
                             </div>
-                            <div class="grid" style="background-color:red;">
+                            <div class="grid" style="background-color: #D6282E;">
                                 <div class="icon">
                                     <img src="assets/images/icon/12.png" alt="">
                                 </div>
@@ -723,13 +759,13 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="wpo-terms-wrap">
                             <div class="wpo-faq-section">
-                                <h4 style="color: #FF2B32">Frequently Ask Questions</h4>
+                                <h4 style="color: #D6282E">Frequently Ask Questions</h4>
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-12">
                                         <div class="accordion" id="accordionExample">
                                             <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingTwo">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #FF2B32;">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #D6282E;">
                                                         Do you offer emergency plumbing services?
                                                     </button>
                                                 </h3>
@@ -741,7 +777,7 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingThree">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: #FF2B32;">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: #D6282E;">
                                                         What areas do you serve?
                                                     </button>
                                                 </h3>
@@ -753,7 +789,7 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingFour">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color: #FF2B32;">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color: #D6282E;">
                                                         Do you have a water heater services?
                                                     </button>
                                                 </h3>
@@ -765,7 +801,7 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingSix">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: #FF2B32;">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color: #D6282E;">
                                                         Can you detect and repair slab leaks?
                                                     </button>
                                                 </h3>
@@ -777,7 +813,7 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingSeven">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="color: #FF2B32;">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="color: #D6282E;">
                                                         Are your prices upfront, or do you charge hidden fees?
                                                     </button>
                                                 </h3>
@@ -789,7 +825,7 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <h3 class="accordion-header" id="headingEight">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" style="color: #FF2B32;">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" style="color: #D6282E;">
                                                         What’s included in your drain cleaning services?
                                                     </button>
                                                 </h3>
@@ -812,155 +848,6 @@
                 <img src="assets/images/roofingfinest/logofine2.png" class="decor-image faq-decor-image3" alt="Water Image">
             </div>
         </section>
-        <!-- end of wpo-terms-section -->
-        <!-- start wpo-projects -->
-        <section class="wpo-projects section-padding decor-container" style="background-color: #d3d3d3;">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="wpo-section-title">
-                            <h2 style="color: #FF2B32;">Our Latest Project</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-xs-12 sortable-gallery">
-                        <div class="gallery-filters projects-menu">
-                            <ul>
-                                <li><a data-filter="*" href="#" class="current">All Project</a></li>
-                                <li><a data-filter=".Kitchen" href="#">Pipes</a></li>
-                                <li><a data-filter=".Gas" href="#">Outside</a></li>
-                                <li><a data-filter=".Bathroom" href="#">Bathroom</a></li>
-                                <li><a data-filter=".Water" href="#">Water Line</a></li>
-                            </ul>
-                        </div>
-                        <div class="projects-grids gallery-container clearfix">
-                            <div class="grid Kitchen Water">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/line.jpg" style="width: 600; height: 781;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Water Line Repair</a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid Kitchen">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/kit2.jpg" style="width: 611; height: 391;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Water Line Repair</a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid Water">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/line2.jpg" style="width: 600; height: 781;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Water Line</a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid Bathroom Water">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/bath.jpg" style="width: 611; height: 391;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Bathroom Service</a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid Gas Kitchen">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/out.jpg" style="width: 611; height: 391;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Outside Line</a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid Gas">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/out2.jpg" style="width: 611; height: 391;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Outside Line </a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid Water">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/lin3.jpg" style="width: 611; height: 391;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Water Line</a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid Gas">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/out3.jpg" style="width: 611; height: 391;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Outside Line</a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid Bathroom">
-                                <div class="project-inner">
-                                    <div class="img-holder">
-                                        <img src="assets/images/new/bath2.jpg" style="width: 611; height: 391;">
-                                    </div>
-                                    <div class="hover-content">
-                                        <div class="details">
-                                            <h3><a>Bathroom Service</a></h3>
-                                            <p class="cat">Plumbing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Projects section decorative elements -->
-                <img src="assets/images/icon/6.png" class="decor-image projects-decor-image1" alt="Pipe Image">
-                <img src="assets/images/icon/9.png" class="decor-image projects-decor-image2" alt="Tools Image">
-                <img src="assets/images/roofingfinest/logofine2.png" class="decor-image projects-decor-image3" alt="Wrench Image">
-            </div>
-        </section>
         <!-- end wpo-projects -->
         <!-- Start wpo-testimonials-section -->
         <section class="wpo-testimonials-section section-padding decor-container" style="background-image: url('assets/images/pop.jpeg');background-size: cover;background-position: center; position: relative;">
@@ -968,7 +855,7 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6">
                         <div class="wpo-section-title">
-                            <h2 style="color: #FF2B32;">What People’s Say</h2>
+                            <h2 style="color: #D6282E;">What People’s Say</h2>
                             <p style="color: white;">homeowners trust us for fast, friendly service. We take pride in clean work and lasting repairs that keep customers happy.</p>
                         </div>
                     </div>
@@ -1081,15 +968,66 @@
         z-index: 1;
             "></div>
         </section>
-        <!-- End wpo-testimonials-section -->
-        <!-- start wpo-terms-section -->
-        <section class="wpo-terms-section section-padding decor-container" style="background-color: #d3d3d3;">
+
+        <section class="wpo-contact-pg-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-10 offset-lg-1">
+                        <div class="office-info">
+                            <div class="row">
+                            </div>
+                        </div>
+                        <div class="wpo-contact-title">
+                            <h2>Have Any Question?</h2>
+                            <p>We're here to help with all your plumbing needs. Call, email or visit our showroom for quick answers from our plumbing experts.</p>
+                        </div>
+                        <div class="wpo-contact-form-area">
+                            <form method="post" class="contact-validation-active" id="contact-form">
+                                <div>
+                                    <input type="text" class="form-control" name="name" id="name2"
+                                        placeholder="Your Name">
+                                </div>
+                                <div>
+                                    <input type="email" class="form-control" name="email" id="emai2l"
+                                        placeholder="Your Email">
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" name="phone" id="phone2"
+                                        placeholder="Your Phone">
+                                </div>
+                                <div>
+                                    <select name="subject" class="form-control" id="subject2">
+                                        <option disabled="disabled" selected>Subject</option>
+                                        <option>Office</option>
+                                        <option>Home</option>
+                                        <option>Shop</option>
+                                    </select>
+                                </div>
+                                <div class="fullwidth">
+                                    <textarea class="form-control" name="note" id="message2"
+                                        placeholder="Describe Your Plumbing Issue"></textarea>
+                                </div>
+                                <div class="submit-area">
+                                    <button type="submit" onclick="sendEmail()" class="theme-btn"><i class="fa fa-angle-double-right"
+                                            aria-hidden="true"></i> Get in Touch</button>
+                                    <div id="loader">
+                                        <i class="ti-reload"></i>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        
+        <section class="wpo-terms-section section-padding decor-container" style="background-color: #d3d3d3; padding-top: 200px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="wpo-terms-wrap">
                             <div class="wpo-terms-text">
-                                <h2 style="color: #FF2B32;">Contact Covina’s Trusted Plumbing Experts Today!</h2>
+                                <h2 style="color: #D6282E;">Contact Covina’s Trusted Plumbing Experts Today!</h2>
                                 <p>For a great same-day service, emergency repairs, or preventative maintenance, call Finest Rooter & Plumbing to help you out with your plumbing issues.</p>
                                 <ul>
                                     <li>24/7 Emergency Hotline</li>
@@ -1121,7 +1059,7 @@
                                 <p>Flexible Financing Options Available</p>
                                 <p>24/7 Emergency Services</p>
                                 <p>Service Area: Serving all of Southern California</p>
-                                <ul style="display: flex; list-style: none; padding: 0; background-color: #FF2B32; height: 40px; align-items: center;">
+                                <ul style="display: flex; list-style: none; padding: 0; background-color: #D6282E; height: 40px; align-items: center;">
                                     <li style="margin: 0 10px;">
                                         <a href="https://www.instagram.com/finestrooterandplumbing/">
                                             <i class="ti-instagram" style="font-size: 20px; color: black;"></i>
@@ -1268,6 +1206,35 @@
         });
     }
     </script>
+    <script>
+        function sendEmail() {
+            
+            var name = document.getElementById("name2").value;
+            var email = document.getElementById("email2").value;
+            var phone = document.getElementById("phone2").value;
+            var message = document.getElementById("message2").value;
+            var subject = document.getElementById("subject2").value;
+            
+        
+            // Sending email using EmailJS
+            emailjs.send("service_wlpqesg", "template_yq5c94t", {
+                name: name,
+                email: email,
+                phone: phone,
+                subject : subject,
+                message: message,
+                business_name : "Finest Rooter & Plumbing",
+                client_email : "finestrooterplumbing@gmail.com"
+            })
+            .then(function(response) {
+                // Email sent successfully
+                alert("Message sent, thank you " + name);
+            }, function(error) {
+                // Email sending failed
+                console.error("Email sending error:", error);
+            });
+        }
+        </script>
     <script>
         // Show popup after slight delay
         document.addEventListener('DOMContentLoaded', function() {

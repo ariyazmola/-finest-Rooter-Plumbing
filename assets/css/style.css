@@ -246,7 +246,7 @@ a:hover {
   width: 45px;
   height: 45px;
   line-height: 45px;
-  border: 2px solid #FF2B32;
+  border: 2px solid #D6282E;
   border-radius: 45px;
   text-align: center;
   display: none;
@@ -264,7 +264,7 @@ a:hover {
   }
 }
 .back-to-top:hover {
-  background-color: #FF2B32;
+  background-color: #D6282E;
 }
 
 .back-to-top i {
@@ -382,10 +382,11 @@ a:hover {
 }
 
 .theme-btn, .theme-btn-s3, .theme-btn-s4 {
-  background: #FF2B32;
+  background: #d3d3d3;
   color: black;
   display: inline-block;
   font-weight: 400;
+  box-shadow: 3px 3px 3px;
   padding: 18px 40px;
   border: 0;
   text-transform: capitalize;
@@ -399,8 +400,8 @@ a:hover {
   border-radius: 8px;
 }
 .theme-btn:hover, .theme-btn-s3:hover, .theme-btn-s4:hover, .theme-btn:focus, .theme-btn-s3:focus, .theme-btn-s4:focus, .theme-btn:active, .theme-btn-s3:active, .theme-btn-s4:active {
-  background: #ff474c;
-  color: #fff;
+  background: #555555;
+  color: white;
 }
 .theme-btn:hover:after, .theme-btn-s3:hover:after, .theme-btn-s4:hover:after {
   opacity: 1;
@@ -685,7 +686,7 @@ a:hover {
 }
 
 .preloader {
-  background-color: #FF2B32;
+  background-color: #D6282E;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -1392,8 +1393,8 @@ a:hover {
 }
 
 .wpo-site-header .navigation {
-  box-shadow: 0 -5px 15px #FF2B32;
-  background-color: #FF2B32;
+  box-shadow: 0 -5px 15px #D6282E;
+  background-color: #D6282E;
   margin-bottom: 0;
   padding: 0;
   border: 0;
@@ -1895,7 +1896,7 @@ a:hover {
   /*navbar collaps less then 992px*/
 }
 .wpo-site-header .navigation {
-  background-color: #FF2B32;
+  background-color: #D6282E;
   margin-bottom: 0;
   padding: 0;
   border: 0;
@@ -2945,7 +2946,7 @@ hero slider
 4. wpo-footer
 --------------------------------------------------------------*/
 .wpo-site-footer {
-  background: #FF2B32;
+  background: #D6282E;
   position: relative;
   font-size: 15px;
   overflow: hidden;
@@ -3410,7 +3411,7 @@ hero slider
 }
 .wpo-service-section .wpo-service-item {
   padding: 30px;
-  background: #FF2B32;
+  background: #D6282E;
   border-radius: 20px;
   margin-bottom: 30px;
 }
@@ -4216,7 +4217,7 @@ hero slider
   background: #e4f0ff;
 }
 .wpo-features-section-s2 .wpo-features-wrap .wpo-features-item.active {
-  background: #FF2B32;
+  background: #D6282E;
 }
 @media (max-width: 1200px) {
   .wpo-features-section-s2 .wpo-features-wrap .col .angle {
@@ -4334,7 +4335,7 @@ hero slider
   top: 0;
   width: 100%;
   height: 100%;
-  background: #ff474c;
+  background: #6d6d6d;
   content: "";
   z-index: -1;
   opacity: 0.9;
@@ -4473,7 +4474,7 @@ hero slider
   font-size: 22px;
   font-family: "Muli";
   font-weight: 700;
-  color: #FF2B32;
+  color: #D6282E;
 }
 .wpo-about-section .wpo-about-content .signeture p {
   font-size: 16px;
@@ -4566,7 +4567,7 @@ hero slider
   }
 }
 .wpo-projects .projects-menu li a.current {
-  background-color: #FF2B32;
+  background-color: #D6282E;
   color: #fff;
 }
 .wpo-projects .projects-grids {
@@ -5789,7 +5790,7 @@ hero slider
   top: 50%;
   width: 8px;
   height: 8px;
-  background: #FF2B32;
+  background: #D6282E;
   content: "";
   border-radius: 50%;
   transform: translateY(-50%);
@@ -6902,7 +6903,7 @@ hero slider
 }
 .wpo-contact-pg-section .office-info .office-info-item {
   text-align: center;
-  background-color: #FF2B32;
+  background-color: #D6282E;
   box-shadow: 0px 5px 15px 0px rgba(62, 65, 159, 0.1);
   padding: 40px;
 }
