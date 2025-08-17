@@ -24,25 +24,24 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-</head>
-<style>
-    .form-container {
-        background: #D6282E;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    .quote-form input, .quote-form textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #D6282E;
-        border-radius: 4px;
-    }
-    .quote-form button {
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-    }
-    .new-button-style {
+    <style>
+        .form-container {
+            background: #D6282E;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .quote-form input, .quote-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #D6282E;
+            border-radius: 4px;
+        }
+        .quote-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        .new-button-style {
         background-color: #d3d3d3;
         color: #7b3f15;
         padding: 12px 25px;
@@ -52,209 +51,226 @@
         box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6);
         font-weight: bold;
         font-size: 18px;
-    }
-    /* Decorative elements */
-    .decor-container {
-        position: relative;
-        width: 100%;
-        min-height: 100%;
-    }
-    .decor-image {
-        position: absolute;
-        object-fit: cover;
-        opacity: 0.8;
-        z-index: 1; /* Below content but above background */
-    }
-    /* Header section decorations */
-    .header-decor-image1 {
-        width: 60px;
-        top: 10%;
-        left: 5%;
-        transform: rotate(10deg);
-    }
-    .header-decor-image2 {
-        width: 60px;
-        top: 10%;
-        right: 5%;
-    }
-    /* Hero section decorations */
-    .hero-decor-image1 {
-        width: 50px;
-        top: 5%;
-        left: 3%;
-        transform: rotate(15deg);
-    }
-    .hero-decor-image2 {
-        width: 50px;
-        bottom: 10%;
-        right: 3%;
-        transform: rotate(-12deg);
-    }
-    .hero-decor-image3 {
-        width: 95px;
-        top: 25%;
-        right: 5%;
-        transform: rotate(-10deg);
-    }
-    /* Features section decorations */
-    .features-decor-image1 {
-        width: 50px;
-        top: 5%;
-        right: 10%;
-        transform: rotate(20deg);
-    }
-    .features-decor-image2 {
-        width: 50px;
-        bottom: 10%;
-        left: 5%;
-        transform: rotate(-15deg);
-    }
-    .features-decor-image3 {
-        width: 95px;
-        top: 1%;
-        left: 10%;
-    }
-    /* Service section decorations */
-    .service-decor-image1 {
-        width: 120px;
-        top: 3%;
-        right: 5%;
-        transform: rotate(-15deg);
-    }
-    .service-decor-image2 {
-        width: 50px;
-        bottom: 43%;
-        left: 5%;
-        transform: rotate(10deg);
-    }
-    .service-decor-image3 {
-        width: 40px;
-        top: 16%;
-        left: 8%;
-    }
-    .service-decor-image4 {
-        width: 80px;
-        bottom: 10%;
-        right: 8%;
-        transform: rotate(12deg);
-    }
-    /* Fun fact section decorations */
-    .funfact-decor-image1 {
-        width: 60px;
-        top: 10%;
-        left: 3%;
-        transform: rotate(-20deg);
-    }
-    .funfact-decor-image2 {
-        width: 50px;
-        bottom: 15%;
-        right: 5%;
-    }
-    /* FAQ section decorations */
-    .faq-decor-image1 {
-        width: 50px;
-        top: 5%;
-        right: 5%;
-        transform: rotate(15deg);
-    }
-    .faq-decor-image2 {
-        width: 60px;
-        bottom: 0%;
-        left: 5%;
-        transform: rotate(-10deg);
-    }
-    .faq-decor-image3 {
-        width: 100px;
-        top: 8%;
-        left: 10%;
-    }
-    /* Projects section decorations */
-    .projects-decor-image1 {
-        width: 70px;
-        top: 5%;
-        left: 3%;
-        transform: rotate(18deg);
-    }
-    .projects-decor-image2 {
-        width: 60px;
-        bottom: 5%;
-        right: 3%;
-    }
-    .projects-decor-image3 {
-        width: 100px;
-        top: 10%;
-        right: 5%;
-        transform: rotate(-12deg);
-    }
-    /* Testimonials section decorations */
-    .testimonials-decor-image1 {
-        width: 120px;
-        top: 0%;
-        left: 5%;
-        transform: rotate(-15deg);
-    }
-    .testimonials-decor-image2 {
-        width: 170px;
-        bottom: 30%;
-        right: 80%;
-    }
-    .testimonials-decor-image3 {
-        width: 50px;
-        top: 23%;
-        right: 10%;
-        transform: rotate(10deg);
-    }
-    /* Contact section decorations */
-    .contact-decor-image1 {
-        width: 60px;
-        top: 5%;
-        right: 5%;
-        transform: rotate(12deg);
-    }
-    .contact-decor-image2 {
-        width: 50px;
-        bottom: 0%;
-        left: 5%;
-    }
-    /* Footer decorations */
-    .footer-decor-image1 {
-        width: 80px;
-        bottom: 15%;
-        left: 3%;
-        transform: rotate(20deg);
-    }
-    .footer-decor-image2 {
-        width: 65px;
-        top: 6%;
-        right: 6%;
-        transform: rotate(-10deg);
-    }
-    .footer-decor-image4 {
-        width: 120px;
-        bottom: 30%;
-        left: 60%;
-        transform: rotate(15deg);
-    }
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
+        }
+        /* New styles */
+        .new-button-style.third-button {
+            display: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            background-color: #d3d3d3;
+            color: #7b3f15;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6);
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .new-button-style.third-button {
+                display: inline-block;
+            }
+        }
+        
+
+        /* Decorative elements */
+        .decor-container {
+            position: relative;
+            width: 100%;
+            min-height: 100%;
+        }
         .decor-image {
-            width: 50px !important; /* Smaller images on mobile */
+            position: absolute;
+            object-fit: cover;
+            opacity: 0.8;
+            z-index: 1; /* Below content but above background */
         }
-    }
-    @media (max-width: 768px) {
-        .decor-imagex {
-            width: 350px !important;
+        /* Header section decorations */
+        .header-decor-image1 {
+            width: 60px;
+            top: 10%;
+            left: 5%;
+            transform: rotate(10deg);
         }
-    }
-    @media (max-width: 768px) {
-        .decor-image8 {
-            width: 150px !important;
+        .header-decor-image2 {
+            width: 60px;
+            top: 10%;
+            right: 5%;
         }
-    }
-    /* Popup Styles */
-    /* Popup Styles - Enhanced */
-    /* Popup Styles - Mobile Optimized */
-    .popup-overlay {
+        /* Hero section decorations */
+        .hero-decor-image1 {
+            width: 50px;
+            top: 5%;
+            left: 3%;
+            transform: rotate(15deg);
+        }
+        .hero-decor-image2 {
+            width: 50px;
+            bottom: 10%;
+            right: 3%;
+            transform: rotate(-12deg);
+        }
+        .hero-decor-image3 {
+            width: 95px;
+            top: 25%;
+            right: 5%;
+            transform: rotate(-10deg);
+        }
+        /* Features section decorations */
+        .features-decor-image1 {
+            width: 50px;
+            top: 5%;
+            right: 10%;
+            transform: rotate(20deg);
+        }
+        .features-decor-image2 {
+            width: 50px;
+            bottom: 10%;
+            left: 5%;
+            transform: rotate(-15deg);
+        }
+        .features-decor-image3 {
+            width: 95px;
+            top: 1%;
+            left: 10%;
+        }
+        /* Service section decorations */
+        .service-decor-image1 {
+            width: 120px;
+            top: 3%;
+            right: 5%;
+            transform: rotate(-15deg);
+        }
+        .service-decor-image2 {
+            width: 50px;
+            bottom: 43%;
+            left: 5%;
+            transform: rotate(10deg);
+        }
+        .service-decor-image3 {
+            width: 40px;
+            top: 16%;
+            left: 8%;
+        }
+        .service-decor-image4 {
+            width: 80px;
+            bottom: 10%;
+            right: 8%;
+            transform: rotate(12deg);
+        }
+        /* Fun fact section decorations */
+        .funfact-decor-image1 {
+            width: 60px;
+            top: 10%;
+            left: 3%;
+            transform: rotate(-20deg);
+        }
+        .funfact-decor-image2 {
+            width: 50px;
+            bottom: 15%;
+            right: 5%;
+        }
+        /* FAQ section decorations */
+        .faq-decor-image1 {
+            width: 50px;
+            top: 5%;
+            right: 5%;
+            transform: rotate(15deg);
+        }
+        .faq-decor-image2 {
+            width: 60px;
+            bottom: 0%;
+            left: 5%;
+            transform: rotate(-10deg);
+        }
+        .faq-decor-image3 {
+            width: 100px;
+            top: 8%;
+            left: 10%;
+        }
+        /* Projects section decorations */
+        .projects-decor-image1 {
+            width: 70px;
+            top: 5%;
+            left: 3%;
+            transform: rotate(18deg);
+        }
+        .projects-decor-image2 {
+            width: 60px;
+            bottom: 5%;
+            right: 3%;
+        }
+        .projects-decor-image3 {
+            width: 100px;
+            top: 10%;
+            right: 5%;
+            transform: rotate(-12deg);
+        }
+        /* Testimonials section decorations */
+        .testimonials-decor-image1 {
+            width: 120px;
+            top: 0%;
+            left: 5%;
+            transform: rotate(-15deg);
+        }
+        .testimonials-decor-image2 {
+            width: 170px;
+            bottom: 30%;
+            right: 80%;
+        }
+        .testimonials-decor-image3 {
+            width: 50px;
+            top: 23%;
+            right: 10%;
+            transform: rotate(10deg);
+        }
+        /* Contact section decorations */
+        .contact-decor-image1 {
+            width: 60px;
+            top: 5%;
+            right: 5%;
+            transform: rotate(12deg);
+        }
+        .contact-decor-image2 {
+            width: 50px;
+            bottom: 0%;
+            left: 5%;
+        }
+        /* Footer decorations */
+        .footer-decor-image1 {
+            width: 80px;
+            bottom: 15%;
+            left: 3%;
+            transform: rotate(20deg);
+        }
+        .footer-decor-image2 {
+            width: 65px;
+            top: 6%;
+            right: 6%;
+            transform: rotate(-10deg);
+        }
+        .footer-decor-image4 {
+            width: 120px;
+            bottom: 30%;
+            left: 60%;
+            transform: rotate(15deg);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .decor-image {
+                width: 50px !important; /* Smaller images on mobile */
+            }
+        }
+        @media (max-width: 768px) {
+            .decor-imagex {
+                width: 350px !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .decor-image8 {
+                width: 150px !important;
+            }
+        }
+        /* Popup Styles */
+        .popup-overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -381,10 +397,10 @@
                 font-size: 16px;
             }
         }
+    </style>
+</head>
 
-</style>
 <body>
-
     <!-- start page-wrapper -->
     <div class="page-wrapper">
         <!-- start preloader -->
@@ -406,7 +422,7 @@
                 <nav class="navigation navbar navbar-expand-lg navbar-light" style="background-color: #D6282E;">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
+                            <div class="col-lg-3 col-md-2 col-2 d-lg-none d-block">
                                 <div class="mobail-menu">
                                     <button type="button" class="navbar-toggler open-btn">
                                         <span class="sr-only">Toggle navigation</span>
@@ -432,13 +448,16 @@
                                     </ul>
                                 </div><!-- end of nav-collapse -->
                             </div>
-                            <div class="col col-lg-3 col-md-2 col-2">
-                                <div class="header-right">
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <div class="header-right text-end">
                                     <div class="close-form">
-                                        <a class="new-button-style" href="tel:626-696-8298">(626) 696-8298</a>
+                                        <a class="new-button-style d-none d-lg-inline-block" href="tel:626-696-8298">(626) 696-8298</a>
+                                        <a class="new-button-style d-inline-block d-lg-none mt-2" href="tel:626-696-8298">Call Us</a>
+
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div><!-- end of container -->
                 </nav>
@@ -459,19 +478,22 @@
                                 
                                 /* Subtle overlay - barely noticeable but improves readability */
                                 .slide-bg-image::after {
-                                  content: "";
-                                  position: absolute;
-                                  top: 0;
-                                  left: 0;
-                                  width: 100%;
-                                  height: 100%;
-                                  background: rgba(0, 0, 0, 0.15); /* Very subtle 20% white overlay */
-                                  z-index: 0;
+                                    content: "";
+                                    background: url('assets/images/main.jpg') no-repeat center center fixed;
+                                    background-size: cover;
+                                    opacity: 0.5; /* Adjust this value (0.1 to 0.6) */
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: -1;
                                 }
                                 
                                 .slide-inner {
-                                  position: relative;
-                                  z-index: 1; /* Ensures content stays above the overlay */
+                                    position: relative;
+                                    color: #ffffff; /* Use light text for better contrast */
+                                    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);/* Ensures content stays above the overlay */
                                 }
                           </style>
                         <div class="container">
@@ -479,7 +501,7 @@
                                 <div class="col-lg-6">
                                     <div class="slide-content">
                                         <div data-swiper-parallax="300" class="slide-title" style="padding-top: 30px;">
-                                            <h1>Plumbing Covina</h1>
+                                            <h1>Southern California</h1>
                                             <h2 class="titleseo">Your Trusted plumbers</h2>
                                             <style>
                                                 h1 {
@@ -487,7 +509,7 @@
                                                     font-size: 20px;
                                                     font-family: 'Arial Black', sans-serif;
                                                     color: #ffffff;
-                                                    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+                                                    text-shadow: 4px 4px 6px rgba(0, 0, 0, 2);
                                                     letter-spacing: 2px;
                                                     text-transform: uppercase;
                                                     font-weight: 900;
@@ -507,7 +529,7 @@
                                             <br>
                                         </div>
                                         <div data-swiper-parallax="400" class="slide-text">
-                                            <p style="font-size: 17px; color: #ffff; margin-bottom: 70px;"><b>We have been a standout Covina plumber for many years so we understand the unique plumbing issues you might have as a home owner or a business owner. We do a lot of work locally so we can get there quick for your emergency plumbing repairs. We can tackle a wide range of issues like gas leaks, sewer line issues and many more! You can have the peace of mind knowing our expert team will take great care of you for any expert plumbing services you might need from a major leak to a routine maintenance.</b></p>
+                                            <p style="font-size: 17px; color: #ffffff; margin-bottom: 70px;"><b>We have been a standout Covina plumber for many years so we understand the unique plumbing issues you might have as a home owner or a business owner. We do a lot of work locally so we can get there quick for your emergency plumbing repairs. We can tackle a wide range of issues like gas leaks, sewer line issues and many more! You can have the peace of mind knowing our expert team will take great care of you for any expert plumbing services you might need from a major leak to a routine maintenance.</b></p>
                                         </div>
                                     </div>
                                 </div>
